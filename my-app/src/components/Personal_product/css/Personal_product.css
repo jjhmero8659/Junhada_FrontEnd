@@ -1,0 +1,14 @@
+#Personal_product_wrap{
+    position: relative;
+    top: -25px;
+    left: 0%;
+    width: 100%;
+    height: 1330px;
+    margin: 0 auto;
+    background-color: #eaeaea;
+}
+
+#Personal_product_wrap nav{
+    background-color: #fff;
+}
+

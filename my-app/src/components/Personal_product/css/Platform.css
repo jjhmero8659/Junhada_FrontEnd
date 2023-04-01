@@ -1,0 +1,47 @@
+#Platform_wrap{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    /* background-color: beige; */
+}
+
+#Platform_wrap > div{
+    position: relative;
+    width: 100%;
+    height: 35px;
+}
+
+#Platform_wrap > div > .logo_img{
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    line-height: 35px;
+}
+
+#Platform_wrap > div > .logo_img img{
+    width: 54px;
+    height: 24px;
+    vertical-align:middle;
+}
+
+#Platform_wrap > div > .platform_price{
+    position: absolute;
+    right: 205px;
+    top: 0px;
+    line-height: 35px;
+    text-align: right;
+}
+
+#Platform_wrap > div > .shipping{
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    line-height: 35px;
+    text-align: right;
+    font-size: 14px;
+    color: rgb(164, 164, 164);
+}
+
+

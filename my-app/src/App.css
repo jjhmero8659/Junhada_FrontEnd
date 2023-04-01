@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body,html{
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+#root{
+  width: 100%;
+  height: 100vh;
+}
+
+body > #root > div{
+  height: 100%;
+}
+#App_wrap{
+  position: relative;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.Search_product{
+  display: none;
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 40px;
+  background-color: #fff;
+}
+
+.Search_product.active{
+  display: block;
+}
+
+.Search_product>.Search{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 90%;
+  height: 40px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-right: none ;
+  box-sizing: border-box;
+  outline: none;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 14px;
+  z-index: 999;
+}
+.Search_product>.Search_icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 10%;
+  height: 40px;
+  border-top: 1px solid #ddd;
+  border-left: none;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd ;
+  box-sizing: border-box;
+  background-color: #fff;
+  cursor: pointer;
+}
+.Search_icon>img{
+  width: 100%;
+}
+
+
+
+#App_wrap .Logo_app{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 114px;
+  height: 46px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 999;
+  background-image: url(../public/img/Home_logo/logo3.png);
+  background-repeat: no-repeat;
+  background-size: 114px 46px;
+}
+
+@font-face {
+  font-family: 'CookieRun-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#App_wrap #main_top{
+  position: relative;
+  left: 0px;
+  top: -22px;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+  background-color: black;
+}
+
+img{
+  width: 100%;
+}

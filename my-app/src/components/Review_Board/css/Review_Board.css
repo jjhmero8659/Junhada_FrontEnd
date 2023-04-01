@@ -1,0 +1,69 @@
+#Review_Board_wrap{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-color: #fff;
+    font-family: 'CookieRun-Regular';
+}
+
+#Review_Board_wrap .Pro_img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+    width: 450px;
+    height: 350px;
+}
+
+#Review_Board_wrap > .review_board_head{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 450px;
+    width: 980px;
+    height: 60px;
+    border-top: 3px solid #000;
+    border-bottom: 1px solid #000;
+}
+.review_board_head>div{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.review_board_head>.num{
+    left: 0px;
+    width: 59px;
+    height: 20px;
+    border-right: 1px solid #000;
+}
+
+.review_board_head>.title{
+    left: 60px;
+    width: 629px;
+    height: 20px;
+    border-right: 1px solid #000;
+}
+
+.review_board_head>.writer{
+    left: 690px;
+    width: 99px;
+    height: 20px;
+    border-right: 1px solid #000;
+}
+
+.review_board_head>.date{
+    left: 790px;
+    width: 99px;
+    height: 20px;
+    border-right: 1px solid #000;
+}
+.review_board_head>.inquiry{
+    right: 0px;
+    width: 89px;
+    height: 20px;
+}

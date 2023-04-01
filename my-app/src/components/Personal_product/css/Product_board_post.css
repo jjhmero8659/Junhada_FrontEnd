@@ -1,0 +1,165 @@
+#Product_board_post_wrap{
+    position: relative;
+    margin: 0px auto;
+    float: left;
+    width: 33.33333%;
+    height: 350px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+#Product_board_post_wrap > .user_img{
+    position: absolute;
+    left:40px;
+    top: 285px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius:300px;
+    transform: scale(1.2);
+}
+
+#Product_board_post_wrap> .user_img>img{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    transform: scale(1.2);
+}
+
+#Product_board_post_wrap>.name{
+    position: absolute;
+    left: 105px;
+    top: 280px;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#Product_board_post_wrap>.title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 220px;
+    width: 265px;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #000;
+}
+
+#Product_board_post_wrap .good_rec_wrap{
+    position: absolute;
+    display: block;
+    right: 40px;
+    bottom: 32px;
+    width: 45px;
+    height: 15px;
+}
+
+#Product_board_post_wrap .bad_rec_wrap{
+    position: absolute;
+    display: block;
+    right: 30px;
+    bottom: 32px;
+    width: 45px;
+    height: 15px;
+}
+
+
+
+#Product_board_post_wrap .good_rec{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: url(../../../../public/img/others/sprite_lost.png) no-repeat 0 0;
+    background-size: 1286px 1261px;
+    width: 24px;
+    height: 21px;
+    background-position: -635px -1178px;
+    transform: scale(0.7);
+}
+
+#Product_board_post_wrap .bad_rec{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: url(../../../../public/img/others/sprite_lost.png) no-repeat 0 0;
+    background-size: 1286px 1261px;
+    width: 24px;
+    height: 21px;
+    background-position: -635px -1178px;
+    transform: scale(0.7);
+}
+
+#Product_board_post_wrap .good_rec img{
+    width: 100%;
+}
+
+
+#Product_board_post_wrap .good_rec_text{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    line-height: 21px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#Product_board_post_wrap .bad_rec_text{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    line-height: 21px;
+    font-weight: bold;
+    font-size: 14px;
+}
+#Product_board_post_wrap .review_img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 80%;
+    height: 180px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 5px solid #000;
+    background-color: #000;
+    overflow: hidden;
+}
+
+#Product_board_post_wrap .review_img>img{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 180px;
+}
+
+#Product_board_post_wrap .time{
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}

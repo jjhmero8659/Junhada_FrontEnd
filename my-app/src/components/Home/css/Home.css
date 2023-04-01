@@ -1,0 +1,86 @@
+#Home_wrap{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 2900px;
+    background-color:  #fff;
+    font-family: 'CookieRun-Regular';
+    overflow: hidden;
+}
+
+#Home_wrap nav{
+  margin-top: 20px;
+}
+#Home_wrap footer{
+    position: absolute;
+    bottom:-10px;
+    left: -50%;
+    width: 200%;
+    height: 130px;
+    background-color: #000;
+    font-size: 12px;
+  }
+  
+  #App_wrap footer>.footer_info{
+    position: relative;
+    left: 60%;
+    transform: translateX(-50%);
+    top: 10px;
+    width: 50%;
+    height: 130px;
+  }
+  
+  .footer_info>p{
+    margin: 10px 0;
+    color: #ddd;
+  }
+
+  #Home_wrap .PagiNation_div{
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      width: 980px;
+      height: 750px;
+  }
+
+  #Home_wrap .PagiNation_div .PagiNation_header{
+    position: absolute;
+    left: 0px;
+    top: -50px;
+    width: 980px;
+    height: 50px;
+    /* border: 1px solid #000; */
+  }
+
+  .font_product{
+      font-weight: bold;
+      line-height: 50px;
+      font-size: 30px;
+      text-align: center;
+      color: #000;
+      /* background-color: #eaeaea; */
+      text-shadow: 1px 1px 1px #ddd;
+  }
+
+  #Home_wrap .footer_Advertise{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 200px;
+      width: 100%;
+      height: 240px;
+      background-color: rgb(227, 230, 239);
+      background-image: url(https://caching2.lottecinema.co.kr/lotte_image/2017/bg_01.jpg);
+      background-repeat: repeat-x;
+      background-position: 0px 0px;
+  } 
+
+  #Home_wrap .footer_Advertise a{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+    width: 980px;
+    height: 240px;
+  }

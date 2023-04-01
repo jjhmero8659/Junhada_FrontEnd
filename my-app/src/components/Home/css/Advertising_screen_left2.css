@@ -1,0 +1,51 @@
+#Advertising_screen_left2_wrap{
+    position: absolute;
+    left: 20px;
+    top :1100px;
+    width: 350px;
+    overflow: hidden;
+    height: 440px;
+    border-radius: 10px;
+    background-color: #eaeaea;
+    z-index: 999;
+}
+
+#Advertising_screen_left2_wrap img{
+    width: 100%;
+}
+
+#Advertising_screen_left2_wrap .slick-slider{
+    width: 100%;
+    height: 440px;
+}
+
+#Advertising_screen_left2_wrap .slick-slider div{
+    width: 100%;
+    height: 440px;
+}
+
+#Advertising_screen_left2_wrap .slick-slider img{
+    width: 100%;
+    height: 440px;
+}
+
+
+
+#Advertising_screen_left2_wrap #close_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    background-position: -40.5px 5px;
+    background-color: #fff;
+    background-image: url(https://ssl.pstatic.net/static/comic/images/sp_remote.png);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+#Advertising_screen_left2_wrap.active{
+    display: none;
+}

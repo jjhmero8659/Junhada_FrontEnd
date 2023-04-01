@@ -1,0 +1,356 @@
+#Slide_Banner_wrap{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    width: 1440px;
+    height: 615px;
+    z-index: 40;
+}
+
+#Slide_Banner_wrap .slick-dots{
+    bottom: 10px;
+}
+
+#Slide_Banner_wrap .slick-slide{
+    width: 100%;
+    height: 615px;
+}
+
+#Slide_Banner_wrap .slick-slide > div {
+    position: relative;
+    width: 100%;
+    height: 615px;
+}
+
+#Slide_Banner_wrap .slick-slide img{
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    height: 615px;
+    cursor: pointer !important;
+}
+
+
+#Slide_Banner_wrap .slick-list{
+    overflow: visible !important;
+}
+
+#Slide_Banner_wrap .slick-arrow{
+    width: 20px !important;
+    height: 35px !important;
+    background-image: url(../img/arrow.png) !important;
+    background-repeat: none !important;
+    transform: translateY(-50%) scale(1.7) !important;
+    z-index: 49;
+    opacity: 0.5;
+}
+
+#Slide_Banner_wrap .slick-prev{
+    left: 80px !important;
+    background-position: 0px 0px !important;
+}
+
+
+
+#Slide_Banner_wrap .slick-next{
+    right: 80px !important;
+    background-position: 75px 2px !important;
+}
+#Slide_Banner_wrap .slick-prev:before , .slick-next:before{
+    content: "" !important;
+}
+
+#Slide_Banner_wrap #transparency{
+    position: absolute;
+    top: 0px;
+    width: 2000px;
+    height: 615px;
+    background-color: rgba(56, 56, 56, 0.8);
+    z-index: 90;
+}
+
+#Slide_Banner_wrap #transparency.right{
+    right: -210.8%;
+    transform: translateX(-50%);
+}
+#Slide_Banner_wrap #transparency.left{
+    left: -141.4%;
+}
+
+#Slide_Banner_wrap .Buds2_h2{
+    position: absolute;
+    left: 150px !important;
+    top: 180px !important;
+    left: 0px;
+    top: 0px;
+    color: #fff;
+    line-height: 1.15;
+    font-weight: bold;
+    word-break: keep-all;
+    font-size: 50px;
+    /* font-family: 'SamsungOneKorean', Dotum, '돋움', sans-serif; */
+}
+
+
+
+#Slide_Banner_wrap .Buds2_h4{
+    position: absolute;
+    left: 150px !important;
+    top: 130px !important;
+    left: 0px;
+    top: 0px;
+    color: #fff;
+    line-height: 1.15;
+    font-weight: bold;
+    word-break: keep-all;
+    font-size: 20px;
+    font-family: 'SamsungOneKorean', Dotum, '돋움', sans-serif;
+}
+
+#Slide_Banner_wrap .Buds2_h5{
+    position: absolute;
+    left: 150px !important;
+    top: 325px !important;
+    left: 0px;
+    top: 0px;
+    color: #fff;
+    line-height: 1.15;
+    font-weight: bold;
+    word-break: keep-all;
+    font-size: 16px;
+    font-family: 'SamsungOneKorean', Dotum, '돋움', sans-serif;
+}
+
+#Slide_Banner_wrap .btn-round{
+    position: absolute;
+    left: 150px;
+    bottom: 190px;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 96px;
+    height: 40px;
+    margin: 0 5px;
+    line-height: 38px;
+    padding: 0 24px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#Slide_Banner_wrap .Galaxy_h2{
+    position: absolute;
+    top: 160px;
+    right: 110px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-size: 45px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#Slide_Banner_wrap .Galaxy_h6{
+    position: absolute;
+    top: 240px;
+    right: 360px;
+    display: block;
+    line-height: 1.3;
+    font-weight: normal;
+    font-size: 20px;
+    color: #000;
+    word-break: keep-all;
+    font-family: 'SamsungOneKorean';
+}
+
+
+#Slide_Banner_wrap .Galaxy_btn{
+    position: absolute;
+    top: 300px;
+    right: 420px;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 96px;
+    height: 40px;
+    margin: 0 5px;
+    line-height: 38px;
+    padding: 0 24px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #000;
+    background-color: #000;
+    border-radius: 20px;
+    /* background: transparent; */
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#Slide_Banner_wrap .Galaxy22_h2{
+    position: absolute;
+    left: 130px;
+    top: 150px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-size: 42px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#Slide_Banner_wrap .Galaxy22_h6{
+    position: absolute;
+    left: 130px;
+    top: 270px;
+    line-height: 1.3;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000;
+    word-break: keep-all;
+    font-family: 'SamsungOneKorean';
+}
+
+#Slide_Banner_wrap .Galaxy22_btn{
+    position: absolute;
+    top: 350px;
+    left: 120px;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 96px;
+    height: 40px;
+    margin: 0 5px;
+    line-height: 38px;
+    padding: 0 24px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #000;
+    background-color: #000;
+    border-radius: 20px;
+    /* background: transparent; */
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#Slide_Banner_wrap .Character_h2{
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-size: 37px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#Slide_Banner_wrap .Character_h6{
+    position: absolute;
+    left: 150px;
+    top: 240px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#Slide_Banner_wrap .Character_btn{
+    position: absolute;
+    top: 320px;
+    left: 130px;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 96px;
+    height: 40px;
+    margin: 0 5px;
+    line-height: 38px;
+    padding: 0 24px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #000;
+    background-color: #000;
+    border-radius: 20px;
+    /* background: transparent; */
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#Slide_Banner_wrap .Watch_h2{
+    position: absolute;
+    left: 200px;
+    top: 180px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-size: 37px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#Slide_Banner_wrap .Watch_h4{
+    position: absolute;
+    left: 200px;
+    top: 120px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#Slide_Banner_wrap .Watch_h6{
+    position: absolute;
+    left: 200px;
+    top: 340px;
+    line-height: 1.15;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#Slide_Banner_wrap .Watch_btn{
+    position: absolute;
+    top: 420px;
+    left: 200px;
+    overflow: hidden;
+    max-width: 100%;
+    min-width: 96px;
+    height: 40px;
+    margin: 0 5px;
+    line-height: 38px;
+    padding: 0 24px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #000;
+    background-color: #000;
+    border-radius: 20px;
+    /* background: transparent; */
+    box-sizing: border-box;
+    vertical-align: middle;
+    cursor: pointer;
+}

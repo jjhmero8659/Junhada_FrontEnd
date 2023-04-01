@@ -1,0 +1,176 @@
+#Summary_text_wrap{
+    position: relative;
+    width: 100%;
+    /* height: 550px; */
+}
+
+#Summary_text_wrap .text{
+    width: 980px;
+    /* height: 500px; */
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+#Summary_text_wrap .default_modify_summary{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+#Summary_text_wrap .modify_summary{
+    width: 980px;
+    height: 500px;
+    box-sizing: border-box;
+    padding: 30px;
+    resize: none;
+    border: none;
+}
+
+#Summary_text_wrap .modify_btn_wrap{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background-color: #f9f9f9; */
+}
+
+#Summary_text_wrap .modify_before{
+    position: absolute;
+    right:210px;
+    bottom:57px;
+    width: 190px;
+    height: 53px;
+    background-color: #4d11c1;
+    text-align: center;
+    line-height: 53px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+#Summary_text_wrap .modify_after{
+    position: absolute;
+    right:130px;
+    bottom:10px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    color: #4d11c1;
+    border-radius: 5px;
+}
+
+#Summary_text_wrap .delete_review{
+    position: absolute;
+    right:10px;
+    bottom:10px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    color: #4d11c1;
+    border-radius: 5px;
+}
+
+#Summary_text_wrap .empathy{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    /* margin-bottom: 50px; */
+    line-height: 60px;
+    text-align: center;
+}
+
+#Summary_text_wrap .empathy img{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    display: block;
+    width: 190px;
+    cursor: pointer;
+}
+
+/* #Summary_text_wrap .empathy img:hover{
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+} */
+
+#Summary_text_wrap .empathy .good_rec{
+    position: absolute;
+    left: 64%;
+    transform: translateX(-50%);
+    border: 1px solid #e3e3e3;
+    border-image: none;
+    width: 70px;
+    height: 51px;
+    color: #666;
+    line-height: 51px;
+    margin-left: 5px;
+    background-color: #f7f7f7;
+}
+
+#Summary_text_wrap .empathy .change_image:hover{
+    border: 1px solid #afafaf;
+}
+
+/* #Summary_text_wrap .empathy .change_image{
+    position: absolute;
+    right: 10px;
+    bottom: -38px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    line-height: 30px;
+    border-radius: 5px;
+    color: #4d11c1;
+    cursor: pointer;
+} */
+
+#Summary_text_wrap .empathy .file_div{
+    position: absolute;
+    left: 0px;
+    top: 120px;
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid #000; */
+    line-height: 30px;
+    border-radius: 5px;
+    color: #4d11c1;
+    cursor: pointer;
+}
+
+#Summary_text_wrap .upload-name{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 900px;
+    height: 80px;
+    background-color: #fff;
+    outline: none;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+}
+
+#Summary_text_wrap .file_label{
+    position: absolute;
+    width: 82px;
+    right: 0px;
+    top: 0px;
+    height: 80px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    line-height: 80px;
+    font-size: 14px;
+}

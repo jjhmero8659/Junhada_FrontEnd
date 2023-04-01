@@ -1,0 +1,57 @@
+#Slick_buy_model_wrap{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 740px;
+    height: 740px;
+    border-radius: 30px;
+    
+}
+
+#Slick_buy_model_wrap.black{
+    background-color: #eaeaea;
+}
+
+#Slick_buy_model_wrap.silver{
+    background-color: rgb(242, 242, 242);
+}
+
+#Slick_buy_model_wrap.green{
+    background-color: rgb(94, 126, 110);
+}
+
+#Slick_buy_model_wrap.pinkgold{
+    background-color: rgb(234, 193, 182);
+}
+
+
+#Slick_buy_model_wrap .slick-arrow{
+    position: absolute;
+    top: 50%;
+    width: 23px;
+    height: 42px;
+    transform: translateY(-50%) scale(1);
+    z-index: 50;
+}
+
+#Slick_buy_model_wrap img{
+    width: 740px;
+    height: 740px;
+}
+
+#Slick_buy_model_wrap .slick-arrow:before{
+    opacity: 0;
+}
+
+
+#Slick_buy_model_wrap .slick-prev{
+    left: -50px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../../public/img/others/arrow_big_left_black.png);
+}
+
+#Slick_buy_model_wrap .slick-next{
+    right: -50px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../../public/img/others/arrow_big_right_black.png);
+}

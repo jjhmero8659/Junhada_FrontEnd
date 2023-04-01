@@ -1,0 +1,126 @@
+#Advertising_screen_wrap{
+    position: fixed;
+    right: 20px;
+    top: 200px;
+    width: 340px;
+    height: 500px;
+    border: 10px solid #eaeaea;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+
+#Advertising_screen_wrap > div{
+    position: absolute;
+    box-sizing: border-box;
+    line-height: 50px;
+}
+
+#Advertising_screen_wrap #close_btn{
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    background-position: -40.5px 5px;
+    background-image: url(https://ssl.pstatic.net/static/comic/images/sp_remote.png);
+    cursor: pointer;
+}
+
+#Advertising_screen_wrap.active{
+    display: none;
+}
+
+
+#Advertising_screen_wrap .text1{
+    left: 0px;
+    top: 70px;
+    width: 400px;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+
+#Advertising_screen_wrap .Logo{
+    position: relative;
+    left: 15px;
+    top: 20px;
+    width: 150px;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+}
+
+#Advertising_screen_wrap .Logo img{
+    width: 100%;
+}
+
+#Advertising_screen_wrap .Logo>span{
+    position: absolute;
+    right: -65px;
+    bottom: 0px;
+    color: #000;
+    font-size: 16px;
+}
+
+#Advertising_screen_wrap .text_mobile{
+    left: 0px;
+    bottom: 40px;
+    width: 400px;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 16px;
+    z-index: 999;
+}
+#Advertising_screen_wrap .mobile_icon{
+    left: 0px;
+    bottom: 0px;
+    width: 400px;
+    height: 50px;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+.mobile_icon .google{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    width: 95px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.mobile_icon .apple{
+    position: absolute;
+    left: 130px;
+    top: 5px;
+    width: 95px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.mobile_icon img{
+    width: 100%;
+}
+
+#Advertising_screen_wrap .character_img{
+    left: 20px;
+    bottom: 80px;
+    width: 300px;
+    height: 290px;
+    padding-left: 30px;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.character_img img{
+    display: block;
+    position: absolute;
+    left: -10px;
+    top: -150px;
+    width: 300px;
+}

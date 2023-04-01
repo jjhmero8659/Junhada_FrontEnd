@@ -1,0 +1,313 @@
+#Galaxy_watch_wrap{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 7200px;
+    overflow: hidden;
+}
+
+#Galaxy_watch_wrap .top_img_timer{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    width: 1920px;
+    height: 790px;
+} 
+
+#Galaxy_watch_wrap .top_img_timer img{
+    width: 1920px;
+    height: 790px;
+} 
+
+
+#Galaxy_watch_wrap .buy_model{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1100px;
+    width: 1400px;
+    height: 1030px;
+} 
+
+#Galaxy_watch_wrap .buy_model .header_p{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    letter-spacing: 0;
+    vertical-align: baseline;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#Galaxy_watch_wrap .buy_model h2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+    width: 1000px;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -.05em;
+    
+}
+
+ #Galaxy_watch_wrap .buy_model .slick_wrap{
+    position: absolute;
+    left: 100px;
+    bottom: 30px;
+    width: 740px;
+    height: 740px;
+    border-radius: 30px;
+    /* background-color: rgb(223, 226, 230); */
+}
+
+#Galaxy_watch_wrap .right_side{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 470px;
+    height: 780px;
+    /* border: 1px solid #000; */
+}
+
+#Galaxy_watch_wrap .right_side .model{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 85px;
+}
+
+#Galaxy_watch_wrap .right_side>div> p{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#Galaxy_watch_wrap .right_side>div>.button_wrap{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 382px;
+    height: 65px;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap>div{
+    position: absolute;
+    top: 0px;
+    width: 185px;
+    height: 65px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid #d4d4d4;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap .left_button{
+    left: 0px;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap .right_button{
+    right: 0px;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap>div.active{
+    border: 2px solid #000;
+    background-color: #000;
+    color: #fff;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap img{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 41px;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap p{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 700;
+    width: 140px;
+    font-family: 'CookieRun-Regular';
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap .left_button img{
+    left: 25px;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap .left_button p{
+    left: 60px;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap .right_button img{
+    left: 8px;
+}
+
+#Galaxy_watch_wrap .right_side .model .button_wrap .right_button p{
+    left: 38px;
+}
+
+
+#Galaxy_watch_wrap .right_side .sys_Ty{
+    position: absolute;
+    right: 0px;
+    top: 85px;
+    width: 100%;
+    height: 60px;
+}
+
+#Galaxy_watch_wrap .right_side .size{
+    position: absolute;
+    right: 0px;
+    top: 145px;
+    width: 100%;
+    height: 60px;
+}
+
+#Galaxy_watch_wrap .right_side .color{
+    position: absolute;
+    right: 0px;
+    top: 205px;
+    width: 100%;
+    height: 60px;
+}
+
+#Galaxy_watch_wrap .right_side .price{
+    position: absolute;
+    right: 0px;
+    top: 285px;
+    width: 100%;
+    height: 171px;
+}
+
+#Galaxy_watch_wrap .right_side .info_button_wrap{
+    position: absolute;
+    right: 0px;
+    top: 480px;
+    width: 100%;
+    height: 55px;
+}
+
+#Galaxy_watch_wrap .right_side .info_button_wrap a{
+    display: block;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    width: 88px;
+    height: 26px;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #000;
+    letter-spacing: -.01em;
+    color: #000;
+}
+
+#Galaxy_watch_wrap .right_side .info_button_wrap .pro_info{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 235px;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 56px;
+    border-radius: 30px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#Galaxy_watch_wrap .right_side .user_event{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 222px;
+}
+
+#Galaxy_watch_wrap .event_benefit1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2400px;
+    width: 1920px;
+    height: 1140px;
+    background-color: rgb(241, 241, 241);
+}
+
+#Galaxy_watch_wrap .event_benefit1 img{
+    width: 1920px;
+    height: 1140px;
+}
+
+
+#Galaxy_watch_wrap .event_benefit2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 3540px;
+    width: 1920px;
+    height: 815px;
+    background-color: rgb(241, 241, 241);
+}
+
+#Galaxy_watch_wrap .event_benefit2 img{
+    width: 1920px;
+    height: 815px;
+}
+
+#Galaxy_watch_wrap .footer_info1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4555px;
+    width: 1920px;
+    height: 1445px;
+    background-color: rgb(241, 241, 241);
+}
+
+#Galaxy_watch_wrap .footer_info1 img{
+    width: 1920px;
+    height: 1445px;
+}
+
+#Galaxy_watch_wrap .footer_info2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 6000px;
+    width: 1920px;
+    height: 1220px;
+    background-color: rgb(241, 241, 241);
+}
+
+#Galaxy_watch_wrap .footer_info2 img{
+    width: 1920px;
+    height: 1220px;
+}
+
+
+
+
+
+
+
+

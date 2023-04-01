@@ -1,0 +1,215 @@
+#Create_review_wrap{
+    width: 100%;
+    height: 100%;
+}
+
+
+#Create_review_wrap .Reivew_title input{
+    position: absolute;
+    left: 110px;
+    top: 4.5px;
+    width: 860px;
+    height: 40px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+#Create_review_wrap .upload_img_wrap input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+#Create_review_wrap .Review_writer_wrap .create_date{
+    margin-left: 250px;
+} 
+
+#Create_review_wrap .upload_img_wrap{
+    margin-top: 95px;
+    width: 100%;
+    height: 100px;
+}
+
+#Create_review_wrap .upload_img_wrap .upload-name{
+    float: left;
+    width: 810px;
+    height: 98px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    font-size: 12px;
+    overflow: auto;
+}
+
+
+#Create_review_wrap .file_label{
+    float: left;
+    margin-left: 10px;
+    width: 100px;
+    height: 96px;
+    padding: 1px 16px;
+    line-height: 96px;
+    border: 1px solid #dddddd;
+    background-color: #ddd;
+    cursor: pointer;
+    text-align: center;
+}
+
+#Create_review_wrap .Reivew_summary_wrap{
+    margin-top: 5px;
+    width: 100%;
+    height: 500px;
+}
+
+#Create_review_wrap .create_summary_text{
+    width: 980px;
+    height: 500px;
+    resize: none;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 50px;
+    border: 1px solid #eaeaea;
+}
+
+#Create_review_wrap .complete_btn_wrap{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+}
+
+#Create_review_wrap .complete_btn{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 80px;
+    height: 30px;
+    background-color:#4d11c1;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#Create_review_wrap .return_review_board{
+    position: absolute;
+    left: 0px;
+    top: -150px;
+    width: 600px;
+    height: 130px;
+    cursor: pointer;
+    
+}
+#Create_review_wrap .return_review_board .rtn_p{
+    width: 100%;
+    text-align: left !important;
+    font-size: 33px;
+    /* background-color: #000; */
+    color: #4d11c1;
+}
+#Create_review_wrap .return_review_board .rtn_p_sec{
+    margin-top: 20px;
+    width: 100%;
+    text-align: left !important;
+    font-size: 25px;
+}
+
+#Review_Board_detail_wrap>.right_submenu{
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    background-color: #eaeaea;
+    top: 50%;
+    right: -520px;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+#Create_review_wrap .right_submenu .slide_banner{
+    position: relative;
+    width: 400px;
+    height: 380px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+
+#Create_review_wrap .right_submenu .slide_banner .make_slick_wrap{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 2400px;
+    height: 380px;
+}
+
+
+#Create_review_wrap .right_submenu .slide_banner .event_poster{
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 380px;
+    background-color: #fff;
+}
+
+
+#Create_review_wrap .right_submenu .slide_banner .event_poster .poster_text{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 120px;
+    cursor: pointer;
+}
+
+#Create_review_wrap .right_submenu .slide_banner .event_poster .poster_text:hover{
+    color: #4d11c1;
+}
+
+#Create_review_wrap .slide_banner .event_poster .poster_text .banner_title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+}
+
+#Create_review_wrap .right_submenu .event_poster .poster_img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 260px;
+    cursor: pointer;
+}
+
+#Create_review_wrap .right_submenu .event_poster .poster_img img{
+    width: 100%;
+    height: 260px;
+}
+
+#Create_review_wrap .right_submenu .advertise_banner{
+    position: relative;
+    width: 400px;
+    height: 380px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}

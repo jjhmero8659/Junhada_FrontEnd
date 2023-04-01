@@ -1,0 +1,37 @@
+#Review_Board_Posts_wrap{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 514px;
+    width: 980px;
+    overflow: hidden;
+    border-bottom: 1px solid #000;
+}
+
+#Review_Board_Posts_wrap .add_review{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 80px;
+    height: 30px;
+    background-color: #4d11c1;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #fff;
+}
+
+#Create_review_wrap .Reivew_title input{
+    position: absolute;
+    left: 110px;
+    top: 2.5px;
+    width: 860px;
+    height: 40px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px
+}

@@ -1,0 +1,119 @@
+#User_Login_Screen_wrap{
+    position: absolute;
+    left: 0px;
+    top: -25px;
+    width: 100%;
+    height: 100%;
+    background-color: #27262c;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.blue-circle {
+    position: absolute;
+    left: -17%;
+    top: 5%;
+    width: 800px;
+    height: 800px;
+    background-color: blue;
+    border-radius: 50%;
+  }
+
+  .light-blue-circle {
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    width: 100px;
+    height:100px;
+    background-color: lightblue;
+    border-radius: 50%;
+  }
+
+  #login_div_area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  #login_text {
+    font-family: 'JK Abode', 'Source Sans Pro', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 120px;
+    color: #ffffff;
+  }
+
+  .input_id, .input_pw {
+    font-family: 'IRANSansXFaNum', 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 42px;
+    width: 400px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #eaeaea; /* border 제거 */
+    background-color: transparent; /* 배경 없애기 */
+    color: #fff; /* 글자 색 흰색으로 변경 */
+  }
+  
+  .input_id::placeholder, .input_pw::placeholder {
+    color: #999999;
+    font-family: 'IRANSansXFaNum', 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .login_btn_wrap {
+    width: 411px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login_btn {
+    background-color: #4044ed;
+    border: none;
+    color: #fff;
+    width: 411px;
+    height: 50px;
+    font-family: 'IRANSansXFaNum', 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  #login_result {
+    color: #fff;
+    font-family: 'IRANSansXFaNum', 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+
+  .right_top_circle{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 500px;
+    height: 500px;
+  }
+
+  .right_bottom_circle{
+    position: absolute;
+    right: 0px;
+    bottom: -60px;
+    width: 500px;
+    height: 500px;
+  }

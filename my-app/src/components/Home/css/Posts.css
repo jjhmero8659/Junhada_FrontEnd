@@ -1,0 +1,19 @@
+#Posts_wrap{
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    padding-bottom: 200px;
+    width: 850px;
+    overflow: hidden;
+}
+
+/* .Posts_background{
+    background-color: black;
+} */
+
+/* #Posts_wrap .Posts_background{
+    border-right:  5px solid #000;
+    border-bottom:  5px solid #000;
+    border-radius: 5px;
+    width: 850px;
+} */

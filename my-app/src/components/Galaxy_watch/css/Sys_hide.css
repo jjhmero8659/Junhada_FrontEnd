@@ -1,0 +1,66 @@
+#Sys_hide_wrap{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+}
+
+#Sys_hide_wrap > p{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#Sys_hide_wrap>div{
+    opacity: .5;
+}
+
+#Sys_hide_wrap  .button_wrap{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 382px;
+    height: 60px;
+}
+
+#Sys_hide_wrap .button_wrap>div{
+    position: absolute;
+    top: 10px;
+    width: 185px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid #d4d4d4;
+}
+
+#Sys_hide_wrap     .button_wrap .left_button{
+    left: 0px;
+}
+
+#Sys_hide_wrap     .button_wrap .right_button{
+    right: 0px;
+}
+
+#Sys_hide_wrap .button_wrap p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 16px;
+    font-weight: 700;
+    width: 140px;
+    font-family: 'CookieRun-Regular';
+    text-align: center;
+}
+
+
+#Sys_hide_wrap     .button_wrap>div.active{
+    border: 2px solid #000;
+    background-color: #000;
+    color: #fff;
+}

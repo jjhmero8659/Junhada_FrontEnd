@@ -1,0 +1,88 @@
+#Pro_Post_wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#Pro_Post_wrap .pro_img{
+    margin: 20px auto;
+    width: 185px;
+    height: 185px;
+}
+
+#Pro_Post_wrap .pro_img img{
+    width: 185px;
+    height: 185px;
+}
+
+#Pro_Post_wrap .pro_name{
+    width: 100%;
+    height: 85px;
+    font-weight: bold;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#Pro_Post_wrap .pro_price{
+    font-size: 1.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#Pro_Post_wrap .pro_price p:nth-child(1){
+    color: #666;
+    font-size: .75rem;
+}
+
+#Pro_Post_wrap .pro_spec{
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+#Pro_Post_wrap .ranking{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+}
+
+#Pro_Post_wrap .triangle-left {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-top: 7.5px solid #000;
+    border-bottom: 7.5px solid transparent;
+    border-left: 7.5px solid #000;
+    border-right: 7.5px solid transparent;
+    z-index: 50;
+  }
+
+  #Pro_Post_wrap .triangle-right {
+    position: absolute;
+    left: 25px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-top: 7.5px solid #000;
+    border-bottom: 7.5px solid transparent;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid #000;
+    z-index: 50;
+  }

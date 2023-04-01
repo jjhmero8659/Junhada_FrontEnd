@@ -1,0 +1,95 @@
+#Product_spec_wrap{
+    position: relative;
+    margin: 0 auto;
+    width: 980px;
+    height: 350px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#Product_spec_wrap>#iframe_head{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;   
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px 0px 0px 0px;
+}
+
+#Product_spec_wrap>#spec_head{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0px 5px 0px 0px;
+}
+
+#iframe_head.active .ifame_wrap , #spec_head.active .spec_wrap{
+    display: block !important;
+}
+
+#iframe_head.active , #spec_head.active{
+    border-bottom: 2px solid #fff !important;
+}
+
+#Product_spec_wrap>#iframe_head>.ifame_wrap{
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 980px;
+    height: 300px;
+    background-color: #000;
+    border-radius: 0px 0px 5px 5px;
+}
+
+#Product_spec_wrap>#spec_head>.spec_wrap{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    width: 980px;
+    height: 300px;
+    background-color: rgb(125, 62, 62);
+}
+
+#Product_spec_wrap .iframe:first-child{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+#Product_spec_wrap .iframe:last-child{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+#iframe_head.active , #spec_head.active{
+    color: yellow !important;
+}
+
+
+
+
+
+

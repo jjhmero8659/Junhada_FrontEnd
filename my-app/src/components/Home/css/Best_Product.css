@@ -1,0 +1,169 @@
+#Best_Product_wrap{
+    position: relative;
+    top: -20px;
+    width: 1045px;
+    height: 500px;
+    margin: 50px auto;
+}
+
+#Best_Product_wrap > .header{
+    position: absolute;
+    left: 0px;
+    top: -49px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#Best_Product_wrap .Posts_wrap{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+    width: 980px;
+    height: 500px;
+    text-align: center;
+    border: 1px solid #eaeaea;
+}
+
+#Best_Product_wrap .Posts_wrap .Best_review_wrap{
+    position: relative;
+    width: 980px;
+    height: 500px;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+}
+#Best_Product_wrap .Best_review_wrap .product_model_txt{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 940px;
+    height: 50px;
+    border: 1px solid #eaeaea;
+    line-height: 50px;
+}
+
+#Best_Product_wrap .Best_review_wrap .product_model_txt .review_writer_div{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    font-size: 13px;
+    
+}
+
+#Best_Product_wrap .Best_review_wrap .profile_img{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 90px;
+    height: 150px;
+    text-align: center;
+    /* border: 1px solid #ddd; */
+    /* background-color: #000; */
+}
+
+#Best_Product_wrap .Best_review_wrap .profile_img>div{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#Best_Product_wrap .Best_review_wrap .profile_img>div>img{
+    width: 150px;
+    height: 150px;
+}
+
+#Best_Product_wrap .Best_review_wrap .summary_div{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 60px;
+    height: 180px;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: 10;
+    font-size: 12px;
+    line-height: 30px;
+    overflow:auto;
+}
+
+#Best_Product_wrap .Best_review_wrap .rec_div{
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+    width: 160px;
+    height: 30px;
+
+}
+
+#Best_Product_wrap .Best_review_wrap .rec_div>div{
+    position: absolute;
+    top: 0px;
+    width: 80px;
+    height: 30px;
+    /* background-color: #eaeaea; */
+}
+
+#Best_Product_wrap .Best_review_wrap .rec_div .good_rec_wrap{
+    left: 0px;
+}
+
+#Best_Product_wrap .Best_review_wrap .rec_div .bad_rec_wrap{
+    right: 0px;
+}
+
+#Best_Product_wrap .Best_review_wrap .rec_div>div .rec_num_txt{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    text-align: left;
+    /* background-color: aqua; */
+}
+
+#Best_Product_wrap .Best_review_wrap .rec_div>div>.img_div{
+    width: 28px;
+    height: 30px;
+    background-color: #fff;
+    background-image: url(../../../../public/img/others/sprite_lost.png);
+}   
+
+#Best_Product_wrap .Best_review_wrap .rec_div .good_rec_wrap>.img_div{
+    background-position: -337px -1175px;
+}
+
+#Best_Product_wrap .Best_review_wrap .rec_div .bad_rec_wrap>.img_div{
+    background-position: -310px -1175px;
+}
+
+
+#Best_Product_wrap .Best_review_wrap .detail_btn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: black;
+    cursor: pointer;
+    z-index: 90;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 2px;
+}

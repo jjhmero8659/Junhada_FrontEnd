@@ -1,0 +1,37 @@
+.User_Login_wrap{
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  z-index: 999;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+
+.User_Login_wrap.active{
+  color: #fff;
+}
+
+.User_Login_wrap a:hover{
+  text-decoration: underline;
+}
+  
+.User_Login_wrap>a{
+  line-height: 40px;
+  color : #fff;
+  font-size: 14px;
+}
+
+.User_Login_wrap.active>a{
+  color: #fff;
+}
+  
+  
+.User_Login_wrap.Login{
+  display: none;
+}

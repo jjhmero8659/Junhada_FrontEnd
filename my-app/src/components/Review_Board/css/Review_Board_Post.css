@@ -1,0 +1,37 @@
+#Review_Board_Post_wrap{
+    width: 100%;
+    height: 59px;
+    /* background-color: #fff; */
+    border-bottom: 1px solid #ddd;
+}
+
+#Review_Board_Post_wrap>div{
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 12px;
+}
+
+#Review_Board_Post_wrap> .num{
+    width: 60px;  
+}
+
+#Review_Board_Post_wrap> .title{
+    width: 630px;
+    cursor: pointer;
+}
+#Review_Board_Post_wrap> .name{
+    width: 100px;
+}
+#Review_Board_Post_wrap> .date{
+    width: 100px;
+}
+
+#Review_Board_Post_wrap> .date{
+    width: 100px;
+}
+
+#Review_Board_Post_wrap> .inquiry{
+    width: 90px;
+}

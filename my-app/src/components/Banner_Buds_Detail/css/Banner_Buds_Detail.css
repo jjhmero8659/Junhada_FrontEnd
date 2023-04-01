@@ -1,0 +1,239 @@
+#Banner_Buds_Detail_wrap{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 5300px;
+    overflow: hidden;
+}
+
+#Banner_Buds_Detail_wrap .top_banner{
+    position: absolute;
+    left: 0px;
+    top: 150px;
+    width: 100%;
+}
+
+#Banner_Buds_Detail_wrap .user_event{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1300px;
+    width: 1320px;
+}
+#Banner_Buds_Detail_wrap .slick_animate{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1800px;
+    width: 1320px;
+    height: 620px;
+}
+
+#Banner_Buds_Detail_wrap .slick_animate .slick_wrap{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 760px;
+    height: 620px;
+    border-radius: 20px;
+    background-color: rgb(223, 226, 230);
+    overflow: hidden;
+}
+
+#Banner_Buds_Detail_wrap .slick_animate .slick_wrap div{
+    position: relative;
+}
+
+#Banner_Buds_Detail_wrap .slick_animate .slick_wrap .slick-dots{
+    bottom: 20px;
+}
+
+#Banner_Buds_Detail_wrap .slick_animate .slick_wrap .slick-arrow{
+    position: absolute;
+    top: 50%;
+    width: 23px;
+    height: 42px;
+    transform: translateY(-50%) scale(1.2);
+    z-index: 50;
+}
+
+#Banner_Buds_Detail_wrap .slick-arrow:before{
+    opacity: 0;
+}
+
+
+#Banner_Buds_Detail_wrap .slick_animate .slick_wrap .slick-prev{
+    left: 20px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../public/img/others/arrow_big_left_black.png);
+}
+
+#Banner_Buds_Detail_wrap .slick_animate .slick_wrap .slick-next{
+    right: 20px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../public/img/others/arrow_big_right_black.png);
+}
+
+#Banner_Buds_Detail_wrap .right_side{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 560px;
+    height: 622px;
+    box-sizing: border-box;
+    padding: 157px 90px 0 110px;
+}
+
+#Banner_Buds_Detail_wrap .right_side .pro_name_txt{
+    width: 100%;
+    font-size: 31px;
+    line-height: 50px;
+    letter-spacing: -.07em;
+    font-weight: 700;
+}
+
+#Banner_Buds_Detail_wrap .right_side .pro_code_txt{
+    font-size: 14px;
+    line-height: 26px;
+    color: #666;
+}
+
+#Banner_Buds_Detail_wrap .right_side .pro_color_price{
+    margin-top: 20px;
+}
+
+#Banner_Buds_Detail_wrap .link_buds{
+    display: block;
+    float: left;
+    width: 77px;
+    height: 22px;
+    margin-top: 70px;
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+}
+
+#Banner_Buds_Detail_wrap .detail_product{
+    float: right;
+    margin-top: 55px;
+    width: 248px;
+    height: 52px;
+    font-size: 20px;
+    letter-spacing: -.03rem;
+    border-radius: 26px;
+    background-color: #000;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 20px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+#Banner_Buds_Detail_wrap .detail_product:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+#Banner_Buds_Detail_wrap .slide_animate2{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2500px;
+    width: 1920px;
+    height: 1038px;
+    overflow: hidden;
+}
+
+#Banner_Buds_Detail_wrap .slide_animate2 p{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#Banner_Buds_Detail_wrap .slide_animate2 p:nth-child(1){
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 700;
+    top: 80px;
+}
+
+#Banner_Buds_Detail_wrap .slide_animate2 p:nth-child(2){
+    font-size: 56px;
+    line-height: 70px;
+    font-weight: 700;
+    top: 130px;
+}
+
+#Banner_Buds_Detail_wrap .slide_animate2 .slick_wrap{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1196px;
+    height: 620px;
+    background-color: #fff;
+    bottom: 150px;
+}
+
+
+#Banner_Buds_Detail_wrap .slide_animate2 .slick_wrap img{
+    display: block;
+    margin: 0 auto;
+    width: 1096px;
+    height: 620px;
+}
+
+#Banner_Buds_Detail_wrap .slide_animate2 .slick-list{
+    overflow: visible !important;
+}
+
+
+
+#Banner_Buds_Detail_wrap .slide_animate2 .slick_wrap .slick-dots{
+    bottom: -50px;
+}
+
+#Banner_Buds_Detail_wrap .slide_animate2 .slick_wrap .slick-arrow{
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translateY(-50%) scale(0.7);
+    z-index: 50;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0,.3);
+    background-position: center;
+}
+
+
+#Banner_Buds_Detail_wrap .slide_animate2 .slick_wrap .slick-prev{
+    left: 80px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../public/img/others/arrow_left.png);
+}
+
+#Banner_Buds_Detail_wrap .slide_animate2 .slick_wrap .slick-next{
+    right: 80px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../public/img/others/arow_right.png);
+}
+
+#Banner_Buds_Detail_wrap .footer_event{
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    background-color: rgb(23, 23, 23);
+    width: 100%;
+    height: 1700px;
+}
+
+#Banner_Buds_Detail_wrap .footer_event img{
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 1320px;
+    transform: translateX(-50%);
+}

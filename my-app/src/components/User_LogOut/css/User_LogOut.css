@@ -1,0 +1,46 @@
+.User_LogOut_wrap{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 380px;
+    height: 40px;
+    z-index: 999;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    z-index: 999;
+    transition: all 0.5s ease-in-out;
+}
+
+.User_LogOut_wrap>div{
+    float: left;
+    line-height: 40px;
+    width: 70px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.User_LogOut_wrap>div:first-child{
+    margin-right: 50px;
+    width: 100px;
+    text-align: right;
+}
+.User_LogOut_wrap>div:last-child{
+    margin-left: 20px;
+}
+
+.User_LogOut_wrap.active{
+    border: none;
+}
+
+.User_LogOut_wrap.active>div{
+    color: #fff;
+}
+
+.User_LogOut_wrap>div:hover{
+    text-decoration: underline;
+    color: #4d11c1;
+}
+
