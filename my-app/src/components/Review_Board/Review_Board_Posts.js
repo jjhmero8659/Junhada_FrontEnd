@@ -9,7 +9,9 @@ function Review_Board_Posts(props){
     const [Current_page,set_Current_page] = useState(1)
     const [Page_per_page,set_Page_per_page] = useState(10)
     const [articlesInfo,setArticlesInfo] = useState(null)
+    const [startArticleNum,setstartArticleNum] = useState(null)
 
+    
     useEffect(()=>{
         load_page();
     },[])
@@ -34,7 +36,16 @@ function Review_Board_Posts(props){
 
     useEffect(()=>{
         load_page();
+        
     },[Current_page])
+
+    useEffect(()=>{
+        if(articlesInfo != null){
+            let startPageNum = articlesInfo.totalElements - (Page_per_page * Current_page-1)
+            startPageNum = startPageNum <= 0 ? 0 : (startPageNum-1)
+            setstartArticleNum(startPageNum)
+        }
+    },[articlesInfo])
 
     const update_current = (data) => {
         set_Current_page(data)
@@ -53,14 +64,17 @@ function Review_Board_Posts(props){
             // window.location.href="/create_review?pro_id="+props.pro_id+"&post_num="+(props.num+1)+"&view="+props.view+"&pro_name="+res.data.Product[0].name;
         }
     }
-    
-    const review_post = articlesInfo != null && articlesInfo.articles.map(
+
+    const review_post = (articlesInfo != null) && articlesInfo.articles.map(
         (data,index) => (
             <Review_Board_Post
                 key = {index}
                 index = {index}
                 data = {data}
-                totalNum = {articlesInfo.total}
+                productId = {props.id}
+                articlesLen = {articlesInfo.articles.length}
+                Page_per_page = {Page_per_page}
+                startArticleNum = {startArticleNum}
             />
         )
     )
@@ -68,7 +82,7 @@ function Review_Board_Posts(props){
         (articlesInfo != null && <div id="Review_Board_Posts_wrap">
             {review_post}
             <Review_Board_Posts_PagiNation
-                articlesTotalNum = {articlesInfo.total}
+                pageNum = {articlesInfo.pageNum}
                 Current_page = {Current_page}
                 Page_per_page = {Page_per_page}
                 update_current = {update_current}

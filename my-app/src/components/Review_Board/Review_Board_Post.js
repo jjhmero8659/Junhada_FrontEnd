@@ -11,15 +11,20 @@ function Review_Board_Post(props){
     const jump_board_detail = async() => {
         navigate("/review_board/detail", {
             state: {
-              productId : props.data.id
+              productId : props.productId,
+              ArticleId : props.data.id
             }
         });
     }
 
+    // if(props.startArticleNum != null){
+    //     setMyIndex(props.startArticleNum + (props.Page_per_page - props.index))
+    // }
+
     return(
         <div id="Review_Board_Post_wrap">
             <div className="num">
-                {props.totalNum - props.index}
+                {props.startArticleNum != null && (props.startArticleNum + (props.articlesLen - props.index) )}
             </div>
             <div className="title" onClick={()=>jump_board_detail()}>
                 {props.data.title}
@@ -28,7 +33,7 @@ function Review_Board_Post(props){
                 {props.data.nickName} 
             </div>
             <div className="date">
-                {props.data.date}
+                {props.data.date != null && props.data.date.slice(0, 10)}
             </div>
             <div className="inquiry">
                 {props.data.inquiry}

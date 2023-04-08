@@ -15,24 +15,24 @@ function User_Login_Screen(props){
     const check_log_info = async() => {
         await axios(
             {
-              url: '/login',
+              url: '/sign/login',
               method: 'get',
               params: {
-                 id : user_id
-                ,password : user_pw
+                 id : "user_id"
+                ,password : "user_pw"
               } , 
-              baseURL: 'http://localhost:8024',
+              baseURL: 'http://localhost:8080',
             }
           ).then(function (response) {
-            if(response.data != null && response.data.trim() != ""){
-                window.sessionStorage.setItem("user_name",response.data);
-                window.sessionStorage.setItem("user_id",user_id);
-                window.sessionStorage.setItem("user_pw",user_pw);
-                window.location.href = "/";
-            }
-            else{
-                alert("Id 또는 Password 가 맞지 않습니다.")
-            }
+            // if(response.data != null && response.data.trim() != ""){
+            //     window.sessionStorage.setItem("user_name",response.data);
+            //     window.sessionStorage.setItem("user_id",user_id);
+            //     window.sessionStorage.setItem("user_pw",user_pw);
+            //     window.location.href = "/";
+            // }
+            // else{
+            //     alert("Id 또는 Password 가 맞지 않습니다.")
+            // }
         });
 
     }

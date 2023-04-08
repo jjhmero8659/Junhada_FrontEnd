@@ -61,7 +61,7 @@ function Product_board_post(props){
                 <img src={props.data.reviewImages[0]}></img>
             </div>
             <div className="time">
-                 {props.data.date} 작성
+                 {props.data.date != null && props.data.date.slice(0,10)} 작성
             </div>
             <div className="good_rec_wrap">
                 <div className="good_rec">

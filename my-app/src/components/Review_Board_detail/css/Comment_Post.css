@@ -1,49 +1,133 @@
 #Comment_Post_wrap{
-    width: 100%;
-    height: 100%;
-}
-
-#Comment_Post_wrap .Data_base_comment{
     position: relative;
     width: 100%;
-    overflow: hidden;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
+    /* background-color: #eaeaea; */
+
+}
+
+#CommentOneDepthWrap{
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
     border-bottom: 1px solid #ddd;
+
+}
+
+#CommentWriter{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+#CommentContent{
+    width: 900px;
+    margin-top: 10px;
+
+}
+
+#CommentCreateTime{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+}
+
+
+#ReplyToCommentCheckBtn{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}
+
+#Comment_Post_wrap #pageMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #eaeaea77;
+    line-height: 50px;
+    border-bottom: 1.5px solid rgb(189, 189, 189);
+    cursor: pointer;
+}
+#Comment_Post_wrap #pageMore > div {
+    width: 50px; /* 자식 요소를 가로로 늘리기 */
+    max-width: 500px; /* 최대 너비 설정 */
+}
+
+#Comment_Post_wrap #insertRtr{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #eaeaea77;
+}
+
+#Comment_Post_wrap #insertArea{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #ddd;
+
+    width: 850px;
+    height: 200px;
+    background-color: #fff;
+}
+
+#Comment_Post_wrap #insertRtr textarea{
+    position: absolute;
+    left: 50%;
+    top: 2px;
+    width: 849px;
+    height: 100px;
+    transform: translateX(-50%);
+    border: none;
     box-sizing: border-box;
     padding: 20px;
-}
+    resize: none;
 
-#Comment_Post_wrap .Data_base_comment>div{
-    float: left;
-    padding-right: 12px;
 }
-
-#Comment_Post_wrap .Data_base_comment .date{
-    line-height: 25px;
-    font-size: 12px;
-    color: rgb(133, 133, 133);
-}
-
-#Comment_Post_wrap .Data_base_comment .summary{
-    width: 100%;
-    overflow: hidden;
-    line-height: 25px;
-    font-size: 15px;
-    color: rgb(133, 133, 133);
-}
-
-#Comment_Post_wrap .Data_base_comment .delete_btn{
+#Comment_Post_wrap #insertRtr #textAreaCount{
     position: absolute;
-    padding-right: 0px;
     right: 10px;
-    top: 10px;
+    bottom: 65px;
+    color: #999;
+    font-size: 13px;
+
+}
+#Comment_Post_wrap #rtrSubmitArea{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #ddd;
+}
+
+#Comment_Post_wrap #rtrSubmitArea>div{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    line-height: 60px;
     width: 80px;
-    height: 30px;
-    background-color: #4d11c1;
-    line-height: 30px;
+    border-left: 1px solid #ddd;
     text-align: center;
-    color: #fff;
     cursor: pointer;
-    border-radius: 2px;
+    color: #4d11c1;
+}
+
+#Comment_Post_wrap #closePageMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #eaeaea77;
+    line-height: 50px;
+    border-top: 1.5px solid rgb(189, 189, 189);
+    border-bottom: 1.5px solid #ddd;
+    cursor: pointer;
 }

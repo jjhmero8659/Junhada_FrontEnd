@@ -5,13 +5,13 @@ import queryString from "query-string";
 import axios from "axios";
 import Summary_text from "./Summary_text.js";
 import $ from "jquery";
-
 import Comment_Posts from "./Comment_Posts.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Review_Board_detail(props,callback, delay){
+
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -20,20 +20,13 @@ function Review_Board_detail(props,callback, delay){
     const [pro_id,set_pro_id] = useState("");
     const [update_summary, set_update_summary] = useState("");
     const [view,set_view] = useState("");
-    const [comment,set_comment] = useState([]);
     const [create_time,set_create_time] = useState(null);
-
-    const [Current_page,set_Current_page] = useState(3)
-    const [Page_per_page,set_Page_per_page] = useState(5)
-    const [comment_arr_len, set_comment_arr_len] = useState(0)
 
     const [count, set_count] = useState(1)
     const [left_distance,set_distance] = useState([400,800,1200,1600,2000])
     const [w,set_w] = useState(400)
     let [current,set_current] = useState(0)
     let [slick_moving,set_slick_moving] = useState(false);
-
-    
 
     useEffect(()=>{
         get_reviewData();
@@ -49,12 +42,11 @@ function Review_Board_detail(props,callback, delay){
               url: '/article/information',
               method: 'GET',
               params: {
-                 id : location.state.productId
+                 id : location.state.ArticleId
               } , 
               baseURL: 'http://localhost:8080',
             }
           ).then(function (response) {
-            console.log(response.data)
             set_review(response.data)
           });
     }
@@ -145,28 +137,16 @@ function Review_Board_detail(props,callback, delay){
 
     const modify_summary = async(summary) => { //본문 수정
         set_update_summary(summary)
-        const res = await axios.put(`/api/put/modify_summary${pro_id}&${summary}&${review.name}&${review.title}`);
+        // const res = await axios.put(`/api/put/modify_summary${pro_id}&${summary}&${review.name}&${review.title}`);
     }
 
-    const get_comment = async(review_data) => {
-        const queryObj = queryString.parse(window.location.search)
-        if(review_data.length != 0){
-            var replace_title_ = review_data.title.replace(/ /g,"_");
-            var replace_date_ = review_data.date.replace(/-/g,"_");
-            
-            const res = await axios.get(`/api/get_comment${queryObj.pro_id}&${review_data.title}&${replace_title_}&${review_data.name}&${replace_date_}&${review_data.time}`,{
-            });
-
-            let array = [res.data.Product]
-
-            set_comment(array)
-            set_comment_arr_len(res.data.Product.length)
-        }
-        
-    }
 
     const back_detail = () => {
-        window.location.href="/review_board?pro_id="+pro_id+"&view="+view;
+        // navigate("/review_board", {
+        //     state: {
+        //       id : location.state.productId
+        //     }
+        // });
     }
 
     const jump_mainscreen = () => {
@@ -176,7 +156,7 @@ function Review_Board_detail(props,callback, delay){
     const jump_reviewscreen = () => {
         navigate("/review_board", {
             state: {
-              productId : review.product_id
+              id : location.state.productId
             }
         });
         // window.location.href = `/review_board?pro_id=${pro_id}&view=${view}`
@@ -186,8 +166,7 @@ function Review_Board_detail(props,callback, delay){
         // window.location.href = `/personal_prodcut?product_id=${pro_id}&view=${view}`
         navigate("/personal_prodcut", {
             state: {
-              id : review.product_id,
-              view : review.category
+              id : location.state.productId
             }
         });
     }
@@ -227,20 +206,7 @@ function Review_Board_detail(props,callback, delay){
         )
     )
 
-    const comment_posts = comment.map(
-        (data,index) => <Comment_Posts
-            view = {view}
-            review_data = {review}
-            review_db_time = {review.time}
-            review_db_date = {review.date}
-            pro_id = {pro_id}
-            data = {data}
-            key = {index}
-            review_create_time = {create_time}
-        />
-    )
-
-    const settings_rev_detail = {
+    const articleImagesSettings = {
         // fade : true,
         arrows:true,
         dots: true,
@@ -263,13 +229,20 @@ function Review_Board_detail(props,callback, delay){
         main_dom.src = tmp;
     }
 
-    
+    const Images = review != null && review.reviewImages.map(
+        (data) => (
+            <div className="userArticlesImagesWrap">
+                <img className="userArticlesImages" src={data} onClick={(e)=>change_main_image_fuc(e)}></img>
+            </div>
+        )
+    )
+
     
     return(
         <div id="Review_Detail_total_wrap">
             
             <div id="Review_Board_border">
-                <h1 onClick={()=>back_detail()}>리뷰게시판</h1>
+                <h1 onClick={()=>jump_reviewscreen()}>리뷰게시판</h1>
                 {review != null && <div id="Review_Board_detail_wrap">
                     <div className="Review_title_wrap">
                         <p>제목</p>
@@ -295,29 +268,19 @@ function Review_Board_detail(props,callback, delay){
                             {review.good_rec}
                         </div>
                     </div>
-                    <div className="image_area">
-                        <img id="main_image" src={review.review_img1}></img>
-                    </div>
-                    <div className="sub_img_div">
-                        {review.review_img2 != null && review.review_img2 != null && <img id="sub_seconde_image" src={review.review_img2} onClick={(e)=>change_main_image_fuc(e)}></img>}
-                        {review.review_img3 != null && review.review_img2 != null && <img id="sub_third_image" src={review.review_img3} onClick={(e)=>change_main_image_fuc(e)}></img>}
-                        {review.review_img4 != null && review.review_img2 != null && <img id="sub_forth_image" src={review.review_img4} onClick={(e)=>change_main_image_fuc(e)}></img>}
-                        {review.review_img5 != null && review.review_img2 != null && <img id="sub_fifth_image" src={review.review_img5} onClick={(e)=>change_main_image_fuc(e)}></img>}   
+                    <div id="ArticleImages">
+                        <Slider {...articleImagesSettings}>
+                            {Images}
+                        </Slider>
                     </div>
                     <div className="Reivew_summary_wrap">
                         {review.summary}
                     </div>
-                    <div className="img_test_src">
-                        <span>원본파일 : </span>{review.review_img1}
-                    </div>
 
                     <div className="Comments">
-                        <h4 className="title">
-                        {/* 댓글 {comment_arr_len} */}
-                        </h4>
-                        <div className="Borad_Comment_Posts_wrap">
-                            {/* {comment_posts} */}
-                        </div>
+                        <Comment_Posts
+                            ArticleId = {location.state.ArticleId}
+                        />
                     </div>
                 </div>}
                 <div className="right_menu">
@@ -380,7 +343,6 @@ function Review_Board_detail(props,callback, delay){
                                     </div>
                                 </div>
                             </div>
-
                             <div id="rev_forth_post" className="event_poster">
                                 <div className="poster_img" onClick={()=>jump_tab8()}>
                                     <img src="/img/review_img_banner_img/tab.png"></img>

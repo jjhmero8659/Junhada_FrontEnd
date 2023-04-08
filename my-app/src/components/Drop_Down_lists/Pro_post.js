@@ -12,7 +12,6 @@ function Pro_Post(props){
     const [lowPrice, setlowPrice] = useState(null)
 
     useEffect(()=>{
-        console.log(props);
         let lowPriceArr = [];
         let arr = [];
         let platform_name_ = ["haemil","wemake","interpark","_11st","lotte","auction","gmarcket","tmon","ssg","coupang"]

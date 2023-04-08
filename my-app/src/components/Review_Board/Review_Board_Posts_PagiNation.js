@@ -6,7 +6,7 @@ function Review_Board_Posts_PagiNation(props){
 
     var page_arr = [];
 
-    for(var i=1; i<Math.ceil(props.articlesTotalNum / props.Page_per_page); i++){
+    for(var i=1; i<=props.pageNum; i++){
         page_arr.push(i);
     }
     

@@ -1,44 +1,15 @@
 #Comment_Posts_wrap{
     width: 100%;
+    margin-bottom: 100px;
+    height: 600px;
 }
 
-#Comment_Posts_wrap .add_comment{
-    position: relative;
-    margin-top: 100px;
+#ReplyTableHead{
     width: 100%;
-    height: 200px;
-}
-
-#Comment_Posts_wrap .add_comment .text_div{
-    width: 100%;
-    height: 220px;
-    background-color: #e8eaee;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 50px;
     box-sizing: border-box;
-}
-
-#Comment_Posts_wrap .add_comment .text_div .comment_textarea{
-    width: 100%;
-    height: 150px;
-    resize: none;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-sizing: border-box;
-    outline: none;
-    background-color: #fff;
-}
-
-#Comment_Posts_wrap .add_comment .add_comment_btn{
-    position: absolute;
-    right: 10px;
-    bottom: -5px;
-    width: 100px;
-    height: 30px;
-    background-color: #747a86;
+    line-height: 50px;
+    background-color: #27262c;
     color: #fff;
-    text-align: center;
-    line-height: 30px;
-    cursor: pointer;
+    border-radius: 5px 5px 0 0;
 }

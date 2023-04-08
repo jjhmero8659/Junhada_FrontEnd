@@ -18,7 +18,6 @@ function Review_Board(){ //날짜 넘겨받아야함
 
 
     useEffect(()=>{
-        // get_article();
         get_proinfo();
     },[])
 
@@ -37,22 +36,6 @@ function Review_Board(){ //날짜 넘겨받아야함
           });
     }
     
-
-    // const get_article = async() => {
-    //     await axios(
-    //         {
-    //           url: '/article/all',
-    //           method: 'get',
-    //           params: {
-    //              id : location.state.id
-    //           } , 
-    //           baseURL: 'http://localhost:8080',
-    //         }
-    //       ).then(function (response) {
-    //         setReview(response.data)
-    //       });
-    // }
-
     return(
         <div id="Review_Board_wrap">
             <div className="Pro_img">
