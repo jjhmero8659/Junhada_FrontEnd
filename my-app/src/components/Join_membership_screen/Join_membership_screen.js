@@ -60,15 +60,17 @@ function Join_membership_screen(props){
                   url: '/sign/up',
                   method: 'put',
                   data: {
-                     id : "213",
-                     password : "3123",
-                     email : "321312",
-                     nickName : "3213"
+                     id : "wkd86591@naver.com",
+                     password : "86598659",
+                     userName : "Mero",
+                     email : "wkd86591@naver.com",
+                     age : 26,
+                     role : "ROLE_USER"
+
                   } , 
-                  headers: {
-                    'Content-Type': 'application/json'
-                  },
                   baseURL: 'http://localhost:8080',
+
+                  withCredentials: true
                 }
               ).then(function (response) {
 

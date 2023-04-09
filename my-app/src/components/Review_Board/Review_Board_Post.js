@@ -7,14 +7,27 @@ import "./css/Review_Board_Post.css";
 
 function Review_Board_Post(props){
     const navigate = useNavigate();
-
     const jump_board_detail = async() => {
-        navigate("/review_board/detail", {
-            state: {
-              productId : props.productId,
-              ArticleId : props.data.id
+
+        await axios(
+            {
+              url: '/article/inquiry',
+              method: 'put',
+              params: {
+                id : props.data.id,
+              } , 
+              baseURL: 'http://localhost:8080',
             }
-        });
+          ).then(function (response) {
+            navigate("/review_board/detail", {
+                state: {
+                  productId : props.productId,
+                  ArticleId : props.data.id
+                }
+            });
+          });
+
+        
     }
 
     // if(props.startArticleNum != null){

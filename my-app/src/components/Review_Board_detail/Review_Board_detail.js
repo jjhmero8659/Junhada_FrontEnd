@@ -257,7 +257,7 @@ function Review_Board_detail(props,callback, delay){
                         </div>
                         <p className="date_title">등록일</p>
                         <div className="Reivew_date">
-                            {review.date}
+                            {review.date != null && review.date.slice(0,10)}
                         </div>
                         <p className="inquiry_img"><img src="https://ssl.nexon.com/s2/game/maplestory/renewal/common/eye_new.png"></img></p>
                         <div className="Reivew_inquiry">

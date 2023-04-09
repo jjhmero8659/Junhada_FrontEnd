@@ -16,8 +16,8 @@ function User_Login_Screen(props){
         await axios(
             {
               url: '/sign/login',
-              method: 'get',
-              params: {
+              method: 'put',
+              data: {
                  id : "user_id"
                 ,password : "user_pw"
               } , 

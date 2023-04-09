@@ -23,7 +23,8 @@
 #CommentContent{
     width: 900px;
     margin-top: 10px;
-
+    font-family: none;
+    font-size: 14px;
 }
 
 #CommentCreateTime{
