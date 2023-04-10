@@ -16,10 +16,10 @@ function User_Login_Screen(props){
         await axios(
             {
               url: '/sign/login',
-              method: 'put',
-              data: {
-                 id : "user_id"
-                ,password : "user_pw"
+              method: 'get',
+              params: {
+                 id : "wkd86591@naver.com"
+                ,password : "86598659"
               } , 
               baseURL: 'http://localhost:8080',
             }
