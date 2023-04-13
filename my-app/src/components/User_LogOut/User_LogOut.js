@@ -34,6 +34,7 @@ function User_LogOut(props){
         //         }
         //     )
         // })
+        console.log("window.sessionStorage.getItem('username')",window.sessionStorage.getItem("username"));
     })
 
     const user_logOut = () => {
@@ -49,8 +50,8 @@ function User_LogOut(props){
     }
 
     return(
-        <div className={window.location.href.split("/")[3] == "Drop_Down" ? "User_LogOut_wrap active": "User_LogOut_wrap"}>
-            <div>{window.sessionStorage.getItem("user_name")} 님</div>
+        <div className={window.sessionStorage.getItem("username")!= null ? "User_LogOut_wrap active": "User_LogOut_wrap"}>
+            <div>{window.sessionStorage.getItem("username")} 님</div>
             <div onClick={()=>Mypage_jump()}>마이페이지</div>
             <div onClick={()=>user_logOut()}>로그아웃</div>
         </div>

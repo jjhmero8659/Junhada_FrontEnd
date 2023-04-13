@@ -7,7 +7,7 @@ function User_Login(props){
     const [status,set_status] = useState(false)
 
     useEffect(()=>{
-        set_status(props.Login_status)
+        console.log(window.sessionStorage.getItem("username"));
     },[])
 
     const jump_Login_detail = () => {
@@ -19,7 +19,7 @@ function User_Login(props){
     }
 
     return(
-        <div className={window.location.href.split("/")[3] == "Drop_Down" ? "User_Login_wrap active": "User_Login_wrap"}>
+        <div className={window.sessionStorage.getItem("username") == null ? "User_Login_wrap active": "User_Login_wrap"}>
             <a href="#" onClick={()=>jump_Login_detail()}>Login</a>
             <span> / </span>
             <a href="#" onClick={()=>jump_join_membership_detail()}>Member-ship</a>

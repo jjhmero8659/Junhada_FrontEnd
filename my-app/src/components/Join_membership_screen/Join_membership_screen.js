@@ -62,7 +62,7 @@ function Join_membership_screen(props){
                   data: {
                      id : "wkd86591@naver.com",
                      password : "86598659",
-                     userName : "Mero",
+                     username : "Mero",
                      email : "wkd86591@naver.com",
                      age : 26,
                      role : "ROLE_USER"

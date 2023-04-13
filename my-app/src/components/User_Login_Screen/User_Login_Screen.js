@@ -18,21 +18,20 @@ function User_Login_Screen(props){
               url: '/sign/login',
               method: 'get',
               params: {
-                 id : "wkd86591@naver.com"
+                 email : "wkd86591@naver.com"
                 ,password : "86598659"
               } , 
               baseURL: 'http://localhost:8080',
             }
           ).then(function (response) {
-            // if(response.data != null && response.data.trim() != ""){
-            //     window.sessionStorage.setItem("user_name",response.data);
-            //     window.sessionStorage.setItem("user_id",user_id);
-            //     window.sessionStorage.setItem("user_pw",user_pw);
-            //     window.location.href = "/";
-            // }
-            // else{
-            //     alert("Id 또는 Password 가 맞지 않습니다.")
-            // }
+            if(response.data != null){
+                window.sessionStorage.setItem("username",response.data.username);
+                window.sessionStorage.setItem("role",response.data.role);
+                window.location.href = "/";
+            }
+            else{
+                alert("Id 또는 Password 가 맞지 않습니다.")
+            }
         });
 
     }
