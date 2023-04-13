@@ -32,6 +32,7 @@
 }
 
 .User_LogOut_wrap.active{
+    display: block;
     border: none;
 }
 

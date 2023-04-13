@@ -160,7 +160,7 @@ class App extends Component{
   }
 
   render(){
-    if(window.sessionStorage.getItem("user_name") === null || window.sessionStorage.getItem("user_name") === "null"){
+    if(window.sessionStorage.getItem("username") === null || window.sessionStorage.getItem("username") === "null"){
       var login = <User_Login
 
        />
