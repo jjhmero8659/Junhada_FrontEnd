@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@react-oauth/google": "^0.10.0",
     "create-react-app": "^5.0.0",
     "date-fns": "^2.29.3",
     "imgbb-uploader": "^1.5.0"

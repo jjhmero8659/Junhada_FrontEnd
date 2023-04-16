@@ -5,6 +5,7 @@ import "./css/User_Login_Screen.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import GoogleLoginButton from "./google/GoogleLoginButton.js"
 
 function User_Login_Screen(props){
     const navigate = useNavigate();
@@ -25,7 +26,7 @@ function User_Login_Screen(props){
             }
           ).then(function (response) {
             if(response.data != null){
-                window.sessionStorage.setItem("username",response.data.username);
+                window.sessionStorage.setItem("username",response.data.nickname);
                 window.sessionStorage.setItem("role",response.data.role);
                 window.location.href = "/";
             }
@@ -77,6 +78,9 @@ function User_Login_Screen(props){
                     <button class="login_btn" onClick={()=>check_log_info()}>Login</button>
                     <div id="login_result"></div>
                 </div>
+            </div>
+            <div id="Oauth2LoginArea">
+                <GoogleLoginButton/>
             </div>
         </div>
     )

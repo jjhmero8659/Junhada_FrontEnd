@@ -62,11 +62,11 @@ function Join_membership_screen(props){
                   data: {
                      id : "wkd86591@naver.com",
                      password : "86598659",
-                     username : "Mero",
+                     nickname : "Mero",
                      email : "wkd86591@naver.com",
                      age : 26,
-                     role : "ROLE_USER"
-
+                     role : "ROLE_USER",
+                     phoneNumber : "111-1111-1111"
                   } , 
                   baseURL: 'http://localhost:8080',
 

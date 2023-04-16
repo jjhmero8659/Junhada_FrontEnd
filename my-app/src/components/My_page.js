@@ -6,6 +6,8 @@ import My_page_img_posts from "./My_page_img_posts.js";
 
 function My_page(props){
 
+
+
     const [user_profile_src,set_profile_src] = useState("")
     const [basic_image_div,set_basic_image_div] = useState(false)
     const [basic_image_DB,set_basic_image_DB] = useState([])
@@ -13,15 +15,29 @@ function My_page(props){
     const [replace_sub_user_email,set_sub_user_email] = useState(null)
     const [replace_sub_phone_num,set_replace_sub_phone_num] = useState(null)
 
-    const [first_step_click_status, set_first_step_click_status] = useState("") //클릭한 메뉴거 id , pw , info 중 하나
-
-    const [second_step_click_status, set_second_step_click_status] = useState(false) //클릭한 메뉴거 id , pw , info 중 하나
+    const [userMypageInfo,setuserMypageInfo] = useState(null)
 
 
 
     useEffect(()=>{
    
     },[])
+
+    const getMyPageUserInfo = async() => {
+        await axios(
+            {
+              url: '/user/mypage',
+              method: 'get',
+              params: {
+                 nickName : window.sessionStorage.getItem("user_name")
+              } , 
+              baseURL: 'http://localhost:8080',
+            }
+          ).then(function (response) {
+            setuserMypageInfo(response.data)
+        });
+
+    }
 
 
     const alarm_switch_fuc = () => {

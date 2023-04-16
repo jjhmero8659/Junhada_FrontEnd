@@ -7,7 +7,6 @@ function User_Login(props){
     const [status,set_status] = useState(false)
 
     useEffect(()=>{
-        console.log(window.sessionStorage.getItem("username"));
     },[])
 
     const jump_Login_detail = () => {

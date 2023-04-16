@@ -7,7 +7,6 @@ function User_LogOut(props){
 
     // console.log("Log_out",props)
     useEffect(()=>{
-
         // let log_out_div = document.getElementsByClassName("User_LogOut_wrap")[0]
         // console.log(log_out_div)
         // log_out_div.addEventListener('click', (e) => {
