@@ -1,0 +1,94 @@
+#AddSignInformation_wrap{
+    position: relative;
+    top: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #BFDADA;
+}
+
+#AddSignArea{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    margin-bottom: 100px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 10px solid #fff;
+}
+
+#AddSign_leftSide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(151, 186, 186);
+}
+
+#AddSign_rightSide{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+}
+
+#AddSign_HeadText{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#AddSign_SubText{
+    position: absolute;
+    left: 30px;
+    top: 280px;
+    font-size: 20px;
+    color: #fff;
+
+}
+
+#AddSign_rightSide> #userInputAddInfo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 80%;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
+
+#headTextInAddInfo{
+    font-weight: bold;
+    font-size: 34px;
+    margin-bottom: 20px;
+    height: 10%;
+}
+
+#AddInfoInputArea{
+    width: 100%;
+    height: 90%;
+}
+
+#AddInfoInputArea>.InputUserInfo{
+    width: 100%;
+    height: 40px;
+    background-color: unset;
+    border-bottom:1px solid #ddd;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+
+    margin: 20px 10px 0px 0px;
+    box-sizing: border-box;
+    padding: 0px 20px 0px 20px;
+}

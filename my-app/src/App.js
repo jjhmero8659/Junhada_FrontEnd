@@ -21,6 +21,7 @@ import Galaxy_S22 from "./components/Galaxy_S22/Galaxy_S22.js"
 import Drop_down_list from "./components/Drop_down_list.js"
 import My_page from "./components/My_page.js"
 import ScrollToTop from "./ScrollToTop";
+import AddSignInformation from "./components/AddSignInformation/AddSignInformation";
 
 class App extends Component{
   constructor(props){
@@ -222,17 +223,23 @@ class App extends Component{
                 <Route path="/Slide_banner_Buds" element={<Banner_Buds_Detail //가전제품
                 />}/>
 
-                <Route path="/Slide_banner_Galaxy_watch" element={<Galaxy_watch //가전제품
+                <Route path="/Slide_banner_Galaxy_watch" element={<Galaxy_watch 
                 />}/>
-                <Route path="/Slide_banner_Galaxy_tab8" element={<Galaxy_tab8 //가전제품
-                />}/>
-
-                <Route path="/Slide_banner_Galaxy_S22" element={<Galaxy_S22 //가전제품
+                <Route path="/Slide_banner_Galaxy_tab8" element={<Galaxy_tab8 
                 />}/>
 
-                <Route path="/Drop_Down/product" element={<Drop_down_list //가전제품
+                <Route path="/Slide_banner_Galaxy_S22" element={<Galaxy_S22 
                 />}/>
-                <Route path="/User_LogOut/MyPage" element={<My_page //가전제품
+
+                <Route path="/Drop_Down/product" element={<Drop_down_list 
+                />}/>
+                <Route path="/User_LogOut/MyPage" element={<My_page 
+                />}/>
+                <Route path="/Sign/Add/Detail" element={<AddSignInformation 
+                />}/>
+                <Route path="/kakaoLogin" element={<User_Login_Screen 
+                />}/>
+                <Route path="/naverLogin" element={<User_Login_Screen 
                 />}/>
             </Routes>
   
