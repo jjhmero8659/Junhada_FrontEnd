@@ -1,0 +1,23 @@
+#KakaoLoginButton_Wrap{
+    width: 224px;
+    height: 48px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#KakaoLoginButton_Wrap > a{
+    display: block;
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background-color: 	#FEE500;
+}
+
+#KakaoButtonImage{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

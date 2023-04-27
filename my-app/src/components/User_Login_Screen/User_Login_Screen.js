@@ -1,17 +1,66 @@
 import axios from "axios";
 import React , {useEffect, useState} from "react";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import "./css/User_Login_Screen.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GoogleLoginButton from "./google/GoogleLoginButton.js"
+import KakaoLoginButton from "./kakao/KakaoLoginButton.js";
+import NaverLoginButton from "./naver/NaverLoginButton.js";
 
 function User_Login_Screen(props){
     const navigate = useNavigate();
+    const location = useLocation();
+    
     const [user_id,set_id] = useState("");
     const [user_pw,set_pw] = useState("");
     const [active_status,set_active_status] = useState(false);
+    const REST_API_KEY = '01cec589f64b5160f2696412194687dd'
+    const REDIRECT_URI = 'http://localhost:3000/kakaoLogin'
+    const Kakao_Code = location.search.split('=')[1];
+
+    useEffect(()=>{
+        if(!location.search) return;
+        getKakaoToken();
+    },[])
+
+    const getKakaoToken = async() => {
+        await axios({
+            url: 'https://kauth.kakao.com/oauth/token',
+            method: 'post',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' },
+            data: `grant_type=authorization_code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&code=${Kakao_Code}`
+          }).then( async(res) => {
+            await axios(
+                {
+                  url: '/sign/oauth2/kakao',
+                  method: 'post',
+                  params: {
+                    kakoToken : res.data.id_token
+                  } , 
+                  baseURL: 'http://localhost:8080',
+                }
+              ).then(function (response) {
+                if(response.data.onlyKakao == true){
+                    navigate("/Sign/Add/Detail", {
+                        state: {
+                          data : response.data
+                        }
+                    });
+                }
+                else{
+                    window.sessionStorage.setItem("username",response.data.userInfo.nickname);
+                    // window.sessionStorage.setItem("role",response.data.userInfo.role);
+                    window.location.href = "/";
+                }
+              });
+
+          }).catch(error => {
+            console.error(error); // 오류 발생 시 오류 정보를 출력합니다.
+          });
+          
+    }
 
     const check_log_info = async() => {
         await axios(
@@ -78,10 +127,15 @@ function User_Login_Screen(props){
                     <button class="login_btn" onClick={()=>check_log_info()}>Login</button>
                     <div id="login_result"></div>
                 </div>
+
+                <div id="Oauth2LoginArea">
+                    <GoogleLoginButton/>    
+                    <KakaoLoginButton/>
+                    <NaverLoginButton/>
+                </div>
             </div>
-            <div id="Oauth2LoginArea">
-                <GoogleLoginButton/>
-            </div>
+
+            
         </div>
     )
 }
