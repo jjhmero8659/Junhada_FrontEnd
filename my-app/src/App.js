@@ -233,7 +233,7 @@ class App extends Component{
 
                 <Route path="/Drop_Down/product" element={<Drop_down_list 
                 />}/>
-                <Route path="/User_LogOut/MyPage" element={<My_page 
+                <Route path="/MyPage" element={<My_page 
                 />}/>
                 <Route path="/Sign/Add/Detail" element={<AddSignInformation 
                 />}/>

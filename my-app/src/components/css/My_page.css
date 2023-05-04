@@ -91,6 +91,10 @@
     cursor: pointer;
 }
 
+.change_img>img{
+    width: 100%;
+}
+
 #My_page_wrap .user_info_wrap .user_name{
     width: 200px;
     height: 30px;

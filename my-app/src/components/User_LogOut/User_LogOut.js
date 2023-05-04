@@ -1,38 +1,14 @@
 import React , {useEffect, useState} from "react";
 import "./css/User_LogOut.css";
 import $ from "jquery"; 
-
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'; 
 
 function User_LogOut(props){
+    const location = useLocation();
+    const navigate = useNavigate();
 
-    // console.log("Log_out",props)
     useEffect(()=>{
-        // let log_out_div = document.getElementsByClassName("User_LogOut_wrap")[0]
-        // console.log(log_out_div)
-        // log_out_div.addEventListener('click', (e) => {
-        //     log_out_div.style.right = "400px";
-        // });
-
-        // $(function(){
-        //     $(".User_LogOut_wrap").hover(
-        //         function(e){
-        //             e.stopImmediatePropagation();
-        //             // $(".User_sub").stop().slideToggle(200)
-        //             // $("User_LogOut_wrap").animate
-        //                 $(".User_LogOut_wrap").stop().animate({right:400+"px"}, 600, function(){
-                        
-        //             });
-        //         },
-        //         function(e){
-        //             e.stopImmediatePropagation();
-        //             // $(".User_sub").stop().slideToggle(200)
-        //             // $("User_LogOut_wrap").animate
-        //                 $(".User_LogOut_wrap").stop().animate({right:20+"px"}, 600, function(){
-                        
-        //             });
-        //         }
-        //     )
-        // })
     })
 
     const user_logOut = () => {
@@ -43,7 +19,11 @@ function User_LogOut(props){
     }
 
     const Mypage_jump = () => {
-        window.location.href = "/User_LogOut/MyPage"
+        navigate("/MyPage", {
+            state: {
+              nickName : window.sessionStorage.getItem("username")
+            }
+        });
     }
 
     return(

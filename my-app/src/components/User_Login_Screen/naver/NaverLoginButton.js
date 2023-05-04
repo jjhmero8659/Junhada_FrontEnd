@@ -61,18 +61,20 @@ const NaverLoginButton = () => {
 		const token = window.location.href.split('=')[1].split('&')[0]
 		await axios(
 			{
-			  url: '/sign/oauth2/naver',
+			  url: '/sign/social/login',
 			  method: 'post',
-			  params: {
-				naverAccessToken : token
+			  data: {
+				token : token,
+				platform : "naver"
 			  } , 
 			  baseURL: 'http://localhost:8080',
 			}
 		  ).then( async(response) => {
-			if(response.data.onlyNaver == true){
+			if(response.data.socialLoginPlatform.naver !== true){
 				navigate("/Sign/Add/Detail", {
 					state: {
-					  data : response.data
+					  data : response.data,
+                      platform : "naver"
 					}
 				});
 			}
@@ -85,24 +87,6 @@ const NaverLoginButton = () => {
 		
 	}
 
-	const requestNaverApi = async (accessToken) => {
-		try {
-		  const config = {
-			headers: {
-			  Authorization: `Bearer ${accessToken}`,
-			},
-		  };
-	  
-		  const response = await axios.get(
-			'https://openapi.naver.com/v1/nid/me',
-			config
-		  );
-	  
-		  console.log(response.data); // API 응답 데이터 출력
-		} catch (error) {
-		  console.error(error); // 에러 처리
-		}
-	  };
 	
 
 

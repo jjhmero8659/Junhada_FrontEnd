@@ -13,24 +13,26 @@ const GoogleLoginButton = () => {
     const googleOauth2DataReturn = async(res) => {
         await axios(
             {
-              url: '/sign/oauth2/google',
+              url: '/sign/social/login',
               method: 'post',
               data: {
-                clientId : res.clientId,
-                credential : res.credential
+                token : res.credential,
+                platform : "google"
               } , 
               baseURL: 'http://localhost:8080',
             }
           ).then(function (response) {
-            if(response.data.onlyGoogle == true){
+            console.log(response.data)
+            if(response.data.socialLoginPlatform.google !== true){
                 navigate("/Sign/Add/Detail", {
                     state: {
-                      data : response.data
+                      data : response.data,
+                      platform : "google"
                     }
                 });
             }
             else{
-                window.sessionStorage.setItem("username",response.data.userName);
+                window.sessionStorage.setItem("username",response.data.userInfo.nickname);
                 // window.sessionStorage.setItem("role",response.data.userName);
                 window.location.href = "/";
             }

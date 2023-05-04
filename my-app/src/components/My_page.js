@@ -2,16 +2,13 @@ import axios from "axios";
 import React , {useEffect, useState} from "react";
 import "./css/My_page.css";
 import My_page_img_posts from "./My_page_img_posts.js";
-
+import { useLocation } from 'react-router-dom'; 
 
 function My_page(props){
+    const location = useLocation();
 
-
-
-    const [user_profile_src,set_profile_src] = useState("")
+    const [UserInfo,setUserInfo] = useState(null)
     const [basic_image_div,set_basic_image_div] = useState(false)
-    const [basic_image_DB,set_basic_image_DB] = useState([])
-    const [user_sub_info,set_user_sub_info] = useState([]) // user phone,gender,...
     const [replace_sub_user_email,set_sub_user_email] = useState(null)
     const [replace_sub_phone_num,set_replace_sub_phone_num] = useState(null)
 
@@ -20,7 +17,7 @@ function My_page(props){
 
 
     useEffect(()=>{
-   
+        getMyPageUserInfo()
     },[])
 
     const getMyPageUserInfo = async() => {
@@ -29,12 +26,14 @@ function My_page(props){
               url: '/user/mypage',
               method: 'get',
               params: {
-                 nickName : window.sessionStorage.getItem("user_name")
+                 nickName : location.state.nickName
               } , 
               baseURL: 'http://localhost:8080',
             }
           ).then(function (response) {
-            setuserMypageInfo(response.data)
+            console.log(response.data);
+            setUserInfo(response.data)
+            // setuserMypageInfo(response.data)
         });
 
     }
@@ -55,18 +54,20 @@ function My_page(props){
 
 
     return(
+        
         <div id="My_page_wrap">
+            
             <div className="Top_text">
                 <div className="top_linear cutton"></div>
                 <img src={`/img/background_image/back_img2.jpg`}></img>
             </div>
             
-            
+            {UserInfo &&
             <div className="user_info_wrap">
                 <div className="left_side">
                     <div className="user_profile">
                         <div className="img_wrap">
-                            <img src={user_profile_src}></img>
+                            <img src={UserInfo.profileImage == null ? "/img/user_profile_img/Basic.png" : UserInfo.profileImage}></img>
                         </div>
                         <div className="change_img">
                             <img src="/img/background_image/change.png"></img>
@@ -78,17 +79,17 @@ function My_page(props){
                             X
                         </div>
                         <div className="inner_div">
-                            <My_page_img_posts
+                            {/* <My_page_img_posts
                                 data = {basic_image_DB}
-                            />
+                            /> */}
                         </div>
                         <div className="complete">저장하기</div>
                     </div>
                     <div className="user_name">
-                        {window.sessionStorage.getItem("user_name")} 님
+                        {UserInfo.nickname} 님
                     </div>
                     <div className="user_grade">
-                        <span className="menu_title">등급</span> : 
+                        <span className="menu_title">등급</span> : {UserInfo.role.split('_')[1]}
                     </div>
                     <div className="user_review_count">
                         <span className="menu_title">작성 리뷰</span> : ??? 개
@@ -113,25 +114,25 @@ function My_page(props){
                         </div>
                         <div className="myinfo_area">
                             <div className="profile_div">
-                                <img src={user_profile_src}></img>
+                                <img src={UserInfo.profileImage == null ? "/img/user_profile_img/Basic.png" : UserInfo.profileImage}></img>
                             </div>
                             <div className="user_real_name">
-                                {user_sub_info.real_name}
+                                {UserInfo.nickname}
                             </div>
                             <div className="user_email">
-                                {user_sub_info.email}
+                                {UserInfo.email}
                             </div>
                             <div className="update_real_name">실명수정</div>
                         </div>
                         <div className="phone_div">
                             <div className="phone_img"></div>
-                            <div className="phone_number">{replace_sub_phone_num}</div>
+                            <div className="phone_number">{UserInfo.phoneNumber}</div>
                             <div className="upt_btn">수정</div>
                         </div>
                         <div className="email_div">
                             <div className="first_email_div">
                                 <div className="email_img"></div>
-                                <div className="my_page_email">{replace_sub_user_email}</div>
+                                <div className="my_page_email">{UserInfo.email}</div>
                                 <div className="upt_btn">수정</div>
                             </div>
                             <div className="second_email_div">
@@ -204,7 +205,10 @@ function My_page(props){
                 {/* {second_step} */}
                 <div className="transparency_b"></div>
             </div>
+
+            }
             <div className="transparency_a"></div>
+            
         </div>
     )
 }

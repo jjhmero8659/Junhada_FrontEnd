@@ -1,9 +1,16 @@
 #AddSignInformation_wrap{
     position: relative;
-    top: -20px;
+    top: -25px;
     width: 100%;
     height: 100%;
-    background-color: #BFDADA;
+    background-color: #000;
+}
+
+#backGroundImage1{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 500px;
 }
 
 #AddSignArea{
@@ -63,7 +70,6 @@
     transform: translate(-50%, -50%);
     width: 70%;
     height: 80%;
-    border-bottom: 1px solid #000;
     overflow: hidden;
 }
 
@@ -79,7 +85,37 @@
     height: 90%;
 }
 
-#AddInfoInputArea>.InputUserInfo{
+#PostCodeArea{
+    position: relative;
+}
+
+#PostCodeArea button{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 30px;
+    background-color: #BFDADA;
+    cursor: pointer;
+    border: 1px solid #eaeaea;
+    border-radius: 1px;
+}
+
+#SubmitUserInfo{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #BFDADA;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#AddInfoInputArea .InputUserInfo{
     width: 100%;
     height: 40px;
     background-color: unset;
@@ -91,4 +127,44 @@
     margin: 20px 10px 0px 0px;
     box-sizing: border-box;
     padding: 0px 20px 0px 20px;
+    outline: none;
+}
+
+#DaumPostCodeArea{
+    background : #fff;
+    position : fixed;
+    left:50%;
+    top:50%;
+    height:500px;
+    width:450px !important;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+#DaumPostColseBtn{
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+}
+
+.postmodal{
+    background : rgba(0,0,0,0.25);
+    position : fixed;
+    left:50%;
+    top:50%;
+    height:600px;
+    width:400px !important;
+    transform: translate(-50%, -50%);
+}
+
+#leftWaterImage{
+    position: absolute;
+    left: 0px;
+    bottom: -8px;
 }
