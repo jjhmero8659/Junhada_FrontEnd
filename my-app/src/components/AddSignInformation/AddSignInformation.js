@@ -69,6 +69,7 @@ const AddSignInformation = () => {
               url: '/sign/add/information',
               method: 'post',
               data: {
+                 uid : location.state.data.uid,
                  nickname : NickName,
                  email : Email,
                  role : "ROLE_USER",
