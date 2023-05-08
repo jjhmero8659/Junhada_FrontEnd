@@ -20,7 +20,7 @@ const AddSignInformation = () => {
 
 
     useEffect(()=>{
-        console.log(location.state);
+        console.log(location.state.data);
     },[])
 
     useEffect(() => {

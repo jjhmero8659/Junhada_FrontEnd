@@ -70,6 +70,7 @@ const NaverLoginButton = () => {
 			  baseURL: 'http://localhost:8080',
 			}
 		  ).then( async(response) => {
+			console.log("resopnse : " + response.data)
 			if(response.data.socialLoginPlatform.naver !== true){
 				navigate("/Sign/Add/Detail", {
 					state: {
@@ -79,7 +80,7 @@ const NaverLoginButton = () => {
 				});
 			}
 			else{
-				window.sessionStorage.setItem("username",response.data.userInfo.nickname);
+				window.sessionStorage.setItem("username",response.data.nickname);
 				// window.sessionStorage.setItem("role",response.data.userInfo.role);
 				window.location.href = "/";
 			}

@@ -32,7 +32,7 @@ const GoogleLoginButton = () => {
                 });
             }
             else{
-                window.sessionStorage.setItem("username",response.data.userInfo.nickname);
+                window.sessionStorage.setItem("username",response.data.nickname);
                 // window.sessionStorage.setItem("role",response.data.userName);
                 window.location.href = "/";
             }
