@@ -1,22 +1,21 @@
 import React , {useEffect, useState} from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from "axios"
-//Login.js
-// useEffect(() => {
-//     initializeNaverLogin(); // useEffect로 안하고 onclick하면 로그인배너아이콘 안뜸
-//   }, []);
+import { NAVER_CLIENT_ID } from '../SocialPlatform/PlatformInfo.js';
+import { NAVER_CALLBACK_URL } from '../SocialPlatform/PlatformInfo.js';
+
 
 const NaverLoginButton = () => {
     const navigate = useNavigate();
 
     const { naver } = window
-	const NAVER_CLIENT_ID = `HTYYCmuMyCKp5565Hcne`
-	const NAVER_CALLBACK_URL = `http://localhost:3000/naverLogin`
+	const CLIENT_ID = NAVER_CLIENT_ID
+	const CALLBACK_URL = NAVER_CALLBACK_URL
 
 	const initializeNaverLogin = () => {
 		const naverLogin = new naver.LoginWithNaverId({
-			clientId: NAVER_CLIENT_ID,
-			callbackUrl: NAVER_CALLBACK_URL,
+			clientId: CLIENT_ID,
+			callbackUrl: CALLBACK_URL,
           // 팝업창으로 로그인을 진행할 것인지?           
 			isPopup: false,
           // 버튼 타입 ( 색상, 타입, 크기 변경 가능 )
@@ -70,8 +69,8 @@ const NaverLoginButton = () => {
 			  baseURL: 'http://localhost:8080',
 			}
 		  ).then( async(response) => {
-			console.log("resopnse : " + response.data)
-			if(response.data.socialLoginPlatform.naver !== true){
+			console.log(response.data.nickname);
+			if(response.data.socialLoginPlatform.naver !== true && response.data.nickname == null){
 				navigate("/Sign/Add/Detail", {
 					state: {
 					  data : response.data,
@@ -80,7 +79,7 @@ const NaverLoginButton = () => {
 				});
 			}
 			else{
-				window.sessionStorage.setItem("username",response.data.nickname);
+				window.sessionStorage.setItem("username", response.data.nickname );
 				// window.sessionStorage.setItem("role",response.data.userInfo.role);
 				window.location.href = "/";
 			}

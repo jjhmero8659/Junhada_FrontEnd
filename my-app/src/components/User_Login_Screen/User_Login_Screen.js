@@ -10,7 +10,8 @@ import KakaoLoginButton from "./kakao/KakaoLoginButton.js";
 import NaverLoginButton from "./naver/NaverLoginButton.js";
 import Tiger from "./image/TigerRemove.png";
 import Pumpkin from "./image/Pumpkin.png";
-
+import { KAKAO_REST_API_KEY } from './SocialPlatform/PlatformInfo.js';
+import { KAKAO_REDIRECT_URI } from './SocialPlatform/PlatformInfo.js';
 
 
 function User_Login_Screen(props){
@@ -20,8 +21,7 @@ function User_Login_Screen(props){
     const [Email,setEmail] = useState(null);
     const [Password,setPassword] = useState(null);
     const [active_status,set_active_status] = useState(false);
-    const REST_API_KEY = '01cec589f64b5160f2696412194687dd'
-    const REDIRECT_URI = 'http://localhost:3000/kakaoLogin'
+
     const Kakao_Code = location.search.split('=')[1];
 
     useEffect(()=>{
@@ -34,7 +34,7 @@ function User_Login_Screen(props){
             url: 'https://kauth.kakao.com/oauth/token',
             method: 'post',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' },
-            data: `grant_type=authorization_code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&code=${Kakao_Code}`
+            data: `grant_type=authorization_code&client_id=${KAKAO_REST_API_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&code=${Kakao_Code}`
           }).then( async(res) => {
             await axios(
                 {
@@ -48,7 +48,7 @@ function User_Login_Screen(props){
                 }
               ).then(function (response) {
                 console.log(response.data)
-                if(response.data.socialLoginPlatform.kakao !== true){
+                if(response.data.socialLoginPlatform.kakao !== true && response.data.nickname == null){
                     navigate("/Sign/Add/Detail", {
                         state: {
                           data : response.data,

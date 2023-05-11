@@ -3,11 +3,11 @@ import {GoogleLogin} from "@react-oauth/google";
 import {GoogleOAuthProvider} from "@react-oauth/google";
 import axios from "axios"
 import { useNavigate } from 'react-router-dom';
+import { GOOGLE_CLIENT_ID } from '../SocialPlatform/PlatformInfo.js';
 
 
 
 const GoogleLoginButton = () => {
-    const clientId = '131723005062-ph339iicfnr4siddarsi1totd18e384r.apps.googleusercontent.com'
     const navigate = useNavigate();
 
     const googleOauth2DataReturn = async(res) => {
@@ -22,8 +22,7 @@ const GoogleLoginButton = () => {
               baseURL: 'http://localhost:8080',
             }
           ).then(function (response) {
-            console.log(response.data)
-            if(response.data.socialLoginPlatform.google !== true){
+            if(response.data.socialLoginPlatform.google !== true && response.data.nickname == null){
                 navigate("/Sign/Add/Detail", {
                     state: {
                       data : response.data,
@@ -41,7 +40,7 @@ const GoogleLoginButton = () => {
 
     return (
         <>
-            <GoogleOAuthProvider clientId={clientId}>
+            <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
                 <GoogleLogin
                     onSuccess={(res) => {
                         googleOauth2DataReturn(res);
