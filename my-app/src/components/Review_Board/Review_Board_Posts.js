@@ -3,9 +3,11 @@ import "./css/Review_Board_Posts.css";
 import Review_Board_Post from "./Review_Board_Post.js";
 import Review_Board_Posts_PagiNation from "./Review_Board_Posts_PagiNation.js";
 import axios from "axios";
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Review_Board_Posts(props){
-
+    const navigate = useNavigate();
+    const location = useLocation();
     const [Current_page,set_Current_page] = useState(1)
     const [Page_per_page,set_Page_per_page] = useState(10)
     const [articlesInfo,setArticlesInfo] = useState(null)
@@ -57,10 +59,16 @@ function Review_Board_Posts(props){
             
         // }
 
-        if(window.sessionStorage.getItem("user_name") == null){
+        if(window.sessionStorage.getItem("username") == null){
             alert("로그인 후 글 작성이 가능합니다!")
         }
         else{
+            navigate("/create_review", {
+                state: {
+                    id: props.id
+                }
+            });
+
             // window.location.href="/create_review?pro_id="+props.pro_id+"&post_num="+(props.num+1)+"&view="+props.view+"&pro_name="+res.data.Product[0].name;
         }
     }

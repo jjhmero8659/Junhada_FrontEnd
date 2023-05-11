@@ -4,13 +4,14 @@ import "./css/Create_review.css";
 import File_Posts from "./File_Posts.js";
 import queryString from "query-string";
 import $ from "jquery";
+import {useLocation, useNavigate} from "react-router-dom";
 
 
 
 
 function Create_review(props){
-
-    const [product_id,set_id] = useState("");
+    const navigate = useNavigate();
+    const location = useLocation();
     const [review_header , set_review_header] = useState("");
     const [review_summary , set_review_summary] = useState("");
     const [review_date , set_review_date] = useState("");
@@ -18,7 +19,6 @@ function Create_review(props){
     const [review_inquiry , set_review_inquiry] = useState(0);
     const [review_good_rec , set_good_rec] = useState(0);
     const [review_num , set_review_num] = useState(0);
-    const [view,set_view] = useState("");
     const [pro_name,set_pro_name] = useState(null);
     const [left_distance,set_distance] = useState([400,800,1200,1600,2000])
     const [w,set_w] = useState(400)
@@ -65,54 +65,15 @@ function Create_review(props){
     
     const add_review = async() => {
         alert("load")
-        // console.log(upload_img.name)
-        let today = new Date();  
+
+        let today = new Date();
         let year = today.getFullYear();
         let temp = [];
-
-        if(review_summary != "" && review_header != ""){
-            handlePost()
-            for(let i=0; i<upload_img.length; i++){
-                temp.push(`/img/review_img_folder/${year}_${upload_img[i].file.name}`)
-            }
-            for(let i = upload_img.length; i<5; i++){
-                temp.push("")
-            }
-            var replace_date_ = review_date.replace(/-/g,"_");
-            var replace_title_ = review_header.replace(/ /g,"_");
-        //     // console.log(document.getElementsByClassName("upload_img_input")[0].value) //상대경로로 지정?
-
-
-            var obj = {
-                img_src1 : `${temp[0]}`,
-                img_src2 : `${temp[1]}`,
-                img_src3 : `${temp[2]}`,
-                img_src4 : `${temp[3]}`,
-                img_src5 : `${temp[4]}`,
-                title : review_header,
-                replace_title : replace_title_,
-                id : product_id,
-                summary : review_summary,
-                date : review_date,
-                replace_date : replace_date_,
-                inquiry : review_inquiry,
-                good_rec : review_good_rec,
-                name : window.sessionStorage.getItem("user_name"),
-                num : review_num,
-                review_time : review_time,
-            }
-            // console.log(obj)
-            window.location.href = "/review_board?pro_id="+product_id+"&view="+view+"&date="+replace_date_;
-            const res = await axios.post(`/api/post_/create_review`,obj) //DB 게시판 생성 , 해당 댓글 게시판 DB생성
-        }
-        else{
-            alert("입력되지 않은 내용이 있습니다.")
-        }
+        await handlePost();
     }
 
 
     const handleFileInput = (e)=>{
-        // console.log("///////")
         if(upload_img.length <5){
             let temp = [];
 
@@ -120,13 +81,10 @@ function Create_review(props){
             for (let i = 0; i < photoToAdd.length; i++) {
                 temp.push(
                     { 
-                        // id: photoToAdd[i].name,
                         file: photoToAdd[i],
-                        // url: URL.createObjectURL(photoToAdd[i])
                     }
                 )
             };
-            // set_upload_img(e.target.files[0])
             set_upload_img(temp.concat(upload_img))
         }
         else{
@@ -154,27 +112,29 @@ function Create_review(props){
         for(let i=0; i<upload_img.length; i++){
             const formData = new FormData();
             formData.append('file', upload_img[i].file);
-            // alert(formData.length); //겉으로 확인할때는 안보임
-        
-            await axios.post("/api/upload", formData).then(res => {
-            //   alert('성공')
-            }).catch(err => {
-            alert('실패')
-            })
+
+            await axios(
+                {
+                    url: '/file/upload',
+                    method: 'POST',
+                    data : formData,
+                    params : {
+                        articleId : location.state.id
+                    },
+                    headers: {
+                        'Content-Type': 'multipart/form-data' // 요청 헤더에 Content-Type을 지정
+                    },
+                    baseURL: 'http://localhost:8080',
+                }
+            ).then(function (response) {
+                console.log(response.data)
+            });
         }
     }
     
     
 
     useEffect(()=>{
-        const queryObj = queryString.parse(window.location.search)
-        set_pro_name(queryObj.pro_name)
-        set_id(queryObj.pro_id)
-        set_view(queryObj.view)
-        set_review_num(Number(queryObj.post_num))
-        get_pro_name(queryObj.pro_id,queryObj.view)
-
-
         let today = new Date();  
         let year = today.getFullYear(); // 년도
         let month = today.getMonth() + 1;  // 월
@@ -182,10 +142,6 @@ function Create_review(props){
         let hours = today.getHours();
         let minutes = today.getMinutes();  // 분
         let seconds = today.getSeconds();
-
-        // console.log(`hours : ${hours}`)
-        // console.log(`minutes : ${minutes}`)
-        // console.log(`seconds : ${seconds}`)
 
         if(date < 10 && month < 10){
             set_review_date(`${year}-0${month}-0${date}`)
@@ -204,7 +160,11 @@ function Create_review(props){
     },[])
 
     const rtn_review_board = () => {
-        window.location.href = `/review_board?pro_id=${product_id}&view=${view}`
+        navigate("/create_review", {
+                state: {
+                    id: props.id
+                }
+            });
     }
 
     const get_pro_name = async(id,view) => {
@@ -380,7 +340,7 @@ function Create_review(props){
                     <div className="Review_writer_wrap">
                         <p>작성자</p>
                         <div className="Reivew_writer">
-                            {window.sessionStorage.getItem("user_name")}
+                            {window.sessionStorage.getItem("username")}
                         </div>
                         <p className="create_date">등록일</p>
                         <div className="Reivew_date">
